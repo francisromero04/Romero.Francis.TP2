@@ -3,3 +3,10 @@ C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\obj\Debug\net6.0\
 C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\obj\Debug\net6.0\Biblioteca Truco.AssemblyInfoInputs.cache
 C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\obj\Debug\net6.0\Biblioteca Truco.AssemblyInfo.cs
 C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\obj\Debug\net6.0\Biblioteca Truco.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\bin\Debug\net6.0\Biblioteca Truco.deps.json
+C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\bin\Debug\net6.0\Biblioteca Truco.dll
+C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\bin\Debug\net6.0\Biblioteca Truco.pdb
+C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\obj\Debug\net6.0\Biblioteca Truco.dll
+C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\obj\Debug\net6.0\refint\Biblioteca Truco.dll
+C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\obj\Debug\net6.0\Biblioteca Truco.pdb
+C:\Users\User\source\repos\Romero.Francis.TP2\Biblioteca Truco\obj\Debug\net6.0\ref\Biblioteca Truco.dll
