@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca_Truco;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Forms_Truco
 {
-    public partial class Form1 : Form
+    public partial class FrmMesaTruco : Form
     {
-        public Form1()
+        public FrmMesaTruco(Jugador j1, Jugador j2)
         {
             InitializeComponent();
         }

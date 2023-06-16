@@ -36,7 +36,6 @@ C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\bin\Debug\net6.0-windo
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\bin\Debug\net6.0-windows\Biblioteca Truco.dll
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\bin\Debug\net6.0-windows\Biblioteca Truco.pdb
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms Truco.csproj.AssemblyReference.cache
-C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.Form1.resources
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.Properties.Resources.resources
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms Truco.csproj.GenerateResource.cache
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms Truco.GeneratedMSBuildEditorConfig.editorconfig
@@ -49,3 +48,6 @@ C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windo
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms Truco.pdb
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms Truco.genruntimeconfig.cache
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\ref\Forms Truco.dll
+C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.FrmInicio.resources
+C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.FrmCrearMesa.resources
+C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.FrmMesaTruco.resources
