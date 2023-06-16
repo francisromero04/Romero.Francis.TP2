@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca Truco", "Biblioteca Truco\Biblioteca Truco.csproj", "{AADFF1B5-B055-4527-8C16-823BBBE61098}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forms Truco", "Forms Truco\Forms Truco.csproj", "{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AADFF1B5-B055-4527-8C16-823BBBE61098}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AADFF1B5-B055-4527-8C16-823BBBE61098}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AADFF1B5-B055-4527-8C16-823BBBE61098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
