@@ -13,7 +13,7 @@ namespace Forms_Truco
 {
     public partial class FrmMesaTruco : Form
     {
-        public FrmMesaTruco(Jugador j1, Jugador j2)
+        public FrmMesaTruco(Jugador jugadorUno, Jugador jugadorDos)
         {
             InitializeComponent();
         }
