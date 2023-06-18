@@ -18,7 +18,7 @@ namespace Biblioteca_Truco
         /// </summary>
         static ConexionSQL()
         {
-            ConexionSQL.conexion = new SqlConnection("Server=.;Database=Truco_db;Trusted_Connection=True;");
+            ConexionSQL.conexion = new SqlConnection("Server=.;Database=Truco_Simulador;Trusted_Connection=True;");
             ConexionSQL.comandoTexto = new SqlCommand();
             ConexionSQL.comandoTexto.CommandType = System.Data.CommandType.Text;
             ConexionSQL.comandoTexto.Connection = conexion;

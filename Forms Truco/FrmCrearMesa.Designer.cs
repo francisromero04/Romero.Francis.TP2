@@ -37,16 +37,18 @@
             // 
             // btnJugar
             // 
+            btnJugar.BackColor = SystemColors.AppWorkspace;
             btnJugar.Location = new Point(85, 80);
             btnJugar.Name = "btnJugar";
             btnJugar.Size = new Size(103, 30);
             btnJugar.TabIndex = 4;
             btnJugar.Text = "Jugar";
-            btnJugar.UseVisualStyleBackColor = true;
+            btnJugar.UseVisualStyleBackColor = false;
             btnJugar.Click += btnCrear_Click;
             // 
             // txtJugador2
             // 
+            txtJugador2.BackColor = SystemColors.AppWorkspace;
             txtJugador2.Location = new Point(162, 46);
             txtJugador2.MaxLength = 20;
             txtJugador2.Name = "txtJugador2";
@@ -56,6 +58,7 @@
             // 
             // txtJugador1
             // 
+            txtJugador1.BackColor = SystemColors.AppWorkspace;
             txtJugador1.Location = new Point(162, 17);
             txtJugador1.MaxLength = 20;
             txtJugador1.Name = "txtJugador1";
@@ -85,7 +88,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(274, 122);
             Controls.Add(btnJugar);
             Controls.Add(txtJugador2);
