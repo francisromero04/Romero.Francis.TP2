@@ -149,10 +149,9 @@ namespace Biblioteca_Truco
 
         private static EPalosCarta CalcularPaloAleatorio()
         {
-            EPalosCarta palo;
+            EPalosCarta[] palos = (EPalosCarta[])Enum.GetValues(typeof(EPalosCarta));
             Random random = new Random();
-
-            palo = (EPalosCarta)random.Next(0, 4);
+            EPalosCarta palo = palos[random.Next(palos.Length)];
 
             return palo;
         }

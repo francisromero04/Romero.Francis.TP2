@@ -31,55 +31,55 @@
             lblFechaYHora = new Label();
             lblCantoJugador2 = new Label();
             lblCantoJugador1 = new Label();
-            btnCancelarPartida = new Button();
-            grpPosiciones = new GroupBox();
+            btnCancelarJuego = new Button();
+            gbxPosiciones = new GroupBox();
             lblPosicion2 = new Label();
             lblPosicion1 = new Label();
-            grpBxMesa = new GroupBox();
-            lblTantoJugador2 = new Label();
-            lblTantoJugador1 = new Label();
+            gbxMesa = new GroupBox();
+            lblEnvidoDos = new Label();
+            lblEnvidoUno = new Label();
             lblTanto = new Label();
             lblValorDelTruco = new Label();
-            lblNaipe32 = new Label();
+            lblCarta3B = new Label();
             lblValorTanto = new Label();
-            lblNaipe31 = new Label();
+            lblCarta3A = new Label();
             lblMano3 = new Label();
-            lblNaipe22 = new Label();
-            lblNaipe21 = new Label();
+            lblCarta2B = new Label();
+            lblCarta2A = new Label();
             lblMano2 = new Label();
-            lblNaipe12 = new Label();
-            lblNaipe11 = new Label();
+            lblCarta1B = new Label();
+            lblCarta1A = new Label();
             lblMano1 = new Label();
-            btnAlMazo2 = new Button();
-            btnQuiero2 = new Button();
-            btnTruco2 = new Button();
-            btnFlor2 = new Button();
-            btnFaltaEnvido2 = new Button();
-            btnRealEnvido2 = new Button();
-            btnEnvido2 = new Button();
-            btnAlMazo1 = new Button();
-            grpBxJugador2 = new GroupBox();
-            btnJugarNaipe2 = new Button();
-            chkBxOcultarMano2 = new CheckBox();
+            btnIrseDos = new Button();
+            btnQuieroDos = new Button();
+            btnTrucoDos = new Button();
+            btnFlorDos = new Button();
+            btnFaltaEnvidoDos = new Button();
+            btnRealEnvidoDos = new Button();
+            btnEnvidoDos = new Button();
+            btnIrseUno = new Button();
+            gbxJugadorDos = new GroupBox();
+            btnJugarDos = new Button();
+            chbOcultarDos = new CheckBox();
             rBtn4 = new RadioButton();
             rBtn5 = new RadioButton();
             rBtn6 = new RadioButton();
-            grpBxJugador1 = new GroupBox();
-            btnJugarNaipe1 = new Button();
-            chkBxOcultarMano1 = new CheckBox();
+            gbxJugadorUno = new GroupBox();
+            btnJugarUno = new Button();
+            chbOcultarUno = new CheckBox();
             rBtn1 = new RadioButton();
             rBtn2 = new RadioButton();
             rBtn3 = new RadioButton();
-            btnQuiero1 = new Button();
-            btnTruco1 = new Button();
-            btnFlor1 = new Button();
-            btnFaltaEnvido1 = new Button();
-            btnRealEnvido1 = new Button();
-            btnEnvido1 = new Button();
-            grpPosiciones.SuspendLayout();
-            grpBxMesa.SuspendLayout();
-            grpBxJugador2.SuspendLayout();
-            grpBxJugador1.SuspendLayout();
+            btnQuieroUno = new Button();
+            btnTrucoUno = new Button();
+            btnFlorUno = new Button();
+            btnFaltaEnvidoUno = new Button();
+            btnRealEnvidoUno = new Button();
+            btnEnvidoUno = new Button();
+            gbxPosiciones.SuspendLayout();
+            gbxMesa.SuspendLayout();
+            gbxJugadorDos.SuspendLayout();
+            gbxJugadorUno.SuspendLayout();
             SuspendLayout();
             // 
             // lblFechaYHora
@@ -111,25 +111,26 @@
             lblCantoJugador1.TabIndex = 48;
             lblCantoJugador1.Text = "Falta Envido!";
             // 
-            // btnCancelarPartida
+            // btnCancelarJuego
             // 
-            btnCancelarPartida.Location = new Point(194, 430);
-            btnCancelarPartida.Name = "btnCancelarPartida";
-            btnCancelarPartida.Size = new Size(200, 48);
-            btnCancelarPartida.TabIndex = 47;
-            btnCancelarPartida.Text = "Cancelar Partida";
-            btnCancelarPartida.UseVisualStyleBackColor = true;
+            btnCancelarJuego.Location = new Point(194, 430);
+            btnCancelarJuego.Name = "btnCancelarJuego";
+            btnCancelarJuego.Size = new Size(200, 48);
+            btnCancelarJuego.TabIndex = 47;
+            btnCancelarJuego.Text = "Cancelar Partida";
+            btnCancelarJuego.UseVisualStyleBackColor = true;
+            btnCancelarJuego.Click += btnCancelarJuego_Click;
             // 
-            // grpPosiciones
+            // gbxPosiciones
             // 
-            grpPosiciones.Controls.Add(lblPosicion2);
-            grpPosiciones.Controls.Add(lblPosicion1);
-            grpPosiciones.Location = new Point(194, 352);
-            grpPosiciones.Name = "grpPosiciones";
-            grpPosiciones.Size = new Size(200, 72);
-            grpPosiciones.TabIndex = 46;
-            grpPosiciones.TabStop = false;
-            grpPosiciones.Text = "Posiciones";
+            gbxPosiciones.Controls.Add(lblPosicion2);
+            gbxPosiciones.Controls.Add(lblPosicion1);
+            gbxPosiciones.Location = new Point(194, 352);
+            gbxPosiciones.Name = "gbxPosiciones";
+            gbxPosiciones.Size = new Size(200, 72);
+            gbxPosiciones.TabIndex = 46;
+            gbxPosiciones.TabStop = false;
+            gbxPosiciones.Text = "Posiciones";
             // 
             // lblPosicion2
             // 
@@ -149,46 +150,46 @@
             lblPosicion1.TabIndex = 0;
             lblPosicion1.Text = "Posición 1";
             // 
-            // grpBxMesa
+            // gbxMesa
             // 
-            grpBxMesa.Controls.Add(lblTantoJugador2);
-            grpBxMesa.Controls.Add(lblTantoJugador1);
-            grpBxMesa.Controls.Add(lblTanto);
-            grpBxMesa.Controls.Add(lblValorDelTruco);
-            grpBxMesa.Controls.Add(lblNaipe32);
-            grpBxMesa.Controls.Add(lblValorTanto);
-            grpBxMesa.Controls.Add(lblNaipe31);
-            grpBxMesa.Controls.Add(lblMano3);
-            grpBxMesa.Controls.Add(lblNaipe22);
-            grpBxMesa.Controls.Add(lblNaipe21);
-            grpBxMesa.Controls.Add(lblMano2);
-            grpBxMesa.Controls.Add(lblNaipe12);
-            grpBxMesa.Controls.Add(lblNaipe11);
-            grpBxMesa.Controls.Add(lblMano1);
-            grpBxMesa.Location = new Point(194, 10);
-            grpBxMesa.Name = "grpBxMesa";
-            grpBxMesa.Size = new Size(200, 327);
-            grpBxMesa.TabIndex = 45;
-            grpBxMesa.TabStop = false;
-            grpBxMesa.Text = "Mesa";
+            gbxMesa.Controls.Add(lblEnvidoDos);
+            gbxMesa.Controls.Add(lblEnvidoUno);
+            gbxMesa.Controls.Add(lblTanto);
+            gbxMesa.Controls.Add(lblValorDelTruco);
+            gbxMesa.Controls.Add(lblCarta3B);
+            gbxMesa.Controls.Add(lblValorTanto);
+            gbxMesa.Controls.Add(lblCarta3A);
+            gbxMesa.Controls.Add(lblMano3);
+            gbxMesa.Controls.Add(lblCarta2B);
+            gbxMesa.Controls.Add(lblCarta2A);
+            gbxMesa.Controls.Add(lblMano2);
+            gbxMesa.Controls.Add(lblCarta1B);
+            gbxMesa.Controls.Add(lblCarta1A);
+            gbxMesa.Controls.Add(lblMano1);
+            gbxMesa.Location = new Point(194, 10);
+            gbxMesa.Name = "gbxMesa";
+            gbxMesa.Size = new Size(200, 327);
+            gbxMesa.TabIndex = 45;
+            gbxMesa.TabStop = false;
+            gbxMesa.Text = "Mesa";
             // 
-            // lblTantoJugador2
+            // lblEnvidoDos
             // 
-            lblTantoJugador2.Location = new Point(104, 221);
-            lblTantoJugador2.Name = "lblTantoJugador2";
-            lblTantoJugador2.Size = new Size(90, 15);
-            lblTantoJugador2.TabIndex = 13;
-            lblTantoJugador2.Text = "Tanto Jugador 2";
-            lblTantoJugador2.TextAlign = ContentAlignment.MiddleRight;
+            lblEnvidoDos.Location = new Point(104, 221);
+            lblEnvidoDos.Name = "lblEnvidoDos";
+            lblEnvidoDos.Size = new Size(90, 15);
+            lblEnvidoDos.TabIndex = 13;
+            lblEnvidoDos.Text = "Tanto Jugador 2";
+            lblEnvidoDos.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // lblTantoJugador1
+            // lblEnvidoUno
             // 
-            lblTantoJugador1.AutoSize = true;
-            lblTantoJugador1.Location = new Point(6, 221);
-            lblTantoJugador1.Name = "lblTantoJugador1";
-            lblTantoJugador1.Size = new Size(90, 15);
-            lblTantoJugador1.TabIndex = 12;
-            lblTantoJugador1.Text = "Tanto Jugador 1";
+            lblEnvidoUno.AutoSize = true;
+            lblEnvidoUno.Location = new Point(6, 221);
+            lblEnvidoUno.Name = "lblEnvidoUno";
+            lblEnvidoUno.Size = new Size(90, 15);
+            lblEnvidoUno.TabIndex = 12;
+            lblEnvidoUno.Text = "Tanto Jugador 1";
             // 
             // lblTanto
             // 
@@ -208,14 +209,14 @@
             lblValorDelTruco.TabIndex = 1;
             lblValorDelTruco.Text = "Valor del Truco: 1";
             // 
-            // lblNaipe32
+            // lblCarta3B
             // 
-            lblNaipe32.Location = new Point(137, 168);
-            lblNaipe32.Name = "lblNaipe32";
-            lblNaipe32.Size = new Size(57, 15);
-            lblNaipe32.TabIndex = 10;
-            lblNaipe32.Text = "Carta 3B";
-            lblNaipe32.TextAlign = ContentAlignment.MiddleRight;
+            lblCarta3B.Location = new Point(137, 168);
+            lblCarta3B.Name = "lblCarta3B";
+            lblCarta3B.Size = new Size(57, 15);
+            lblCarta3B.TabIndex = 10;
+            lblCarta3B.Text = "Carta 3B";
+            lblCarta3B.TextAlign = ContentAlignment.MiddleRight;
             // 
             // lblValorTanto
             // 
@@ -226,14 +227,14 @@
             lblValorTanto.TabIndex = 0;
             lblValorTanto.Text = "Valor del Envido: 0";
             // 
-            // lblNaipe31
+            // lblCarta3A
             // 
-            lblNaipe31.AutoSize = true;
-            lblNaipe31.Location = new Point(7, 168);
-            lblNaipe31.Name = "lblNaipe31";
-            lblNaipe31.Size = new Size(52, 15);
-            lblNaipe31.TabIndex = 9;
-            lblNaipe31.Text = "Carta 3A";
+            lblCarta3A.AutoSize = true;
+            lblCarta3A.Location = new Point(7, 168);
+            lblCarta3A.Name = "lblCarta3A";
+            lblCarta3A.Size = new Size(52, 15);
+            lblCarta3A.TabIndex = 9;
+            lblCarta3A.Text = "Carta 3A";
             // 
             // lblMano3
             // 
@@ -244,23 +245,23 @@
             lblMano3.TabIndex = 8;
             lblMano3.Text = "Tercera Mano";
             // 
-            // lblNaipe22
+            // lblCarta2B
             // 
-            lblNaipe22.Location = new Point(137, 105);
-            lblNaipe22.Name = "lblNaipe22";
-            lblNaipe22.Size = new Size(57, 15);
-            lblNaipe22.TabIndex = 7;
-            lblNaipe22.Text = "Carta 2B";
-            lblNaipe22.TextAlign = ContentAlignment.MiddleRight;
+            lblCarta2B.Location = new Point(137, 105);
+            lblCarta2B.Name = "lblCarta2B";
+            lblCarta2B.Size = new Size(57, 15);
+            lblCarta2B.TabIndex = 7;
+            lblCarta2B.Text = "Carta 2B";
+            lblCarta2B.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // lblNaipe21
+            // lblCarta2A
             // 
-            lblNaipe21.AutoSize = true;
-            lblNaipe21.Location = new Point(7, 105);
-            lblNaipe21.Name = "lblNaipe21";
-            lblNaipe21.Size = new Size(52, 15);
-            lblNaipe21.TabIndex = 6;
-            lblNaipe21.Text = "Carta 2A";
+            lblCarta2A.AutoSize = true;
+            lblCarta2A.Location = new Point(7, 105);
+            lblCarta2A.Name = "lblCarta2A";
+            lblCarta2A.Size = new Size(52, 15);
+            lblCarta2A.TabIndex = 6;
+            lblCarta2A.Text = "Carta 2A";
             // 
             // lblMano2
             // 
@@ -271,25 +272,25 @@
             lblMano2.TabIndex = 5;
             lblMano2.Text = "Segunda Mano";
             // 
-            // lblNaipe12
+            // lblCarta1B
             // 
-            lblNaipe12.Location = new Point(137, 46);
-            lblNaipe12.Name = "lblNaipe12";
-            lblNaipe12.Size = new Size(57, 15);
-            lblNaipe12.TabIndex = 4;
-            lblNaipe12.Text = "Carta 1B";
-            lblNaipe12.TextAlign = ContentAlignment.MiddleRight;
+            lblCarta1B.Location = new Point(137, 46);
+            lblCarta1B.Name = "lblCarta1B";
+            lblCarta1B.Size = new Size(57, 15);
+            lblCarta1B.TabIndex = 4;
+            lblCarta1B.Text = "Carta 1B";
+            lblCarta1B.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // lblNaipe11
+            // lblCarta1A
             // 
-            lblNaipe11.AutoSize = true;
-            lblNaipe11.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNaipe11.ForeColor = SystemColors.ControlText;
-            lblNaipe11.Location = new Point(7, 46);
-            lblNaipe11.Name = "lblNaipe11";
-            lblNaipe11.Size = new Size(52, 15);
-            lblNaipe11.TabIndex = 3;
-            lblNaipe11.Text = "Carta 1A";
+            lblCarta1A.AutoSize = true;
+            lblCarta1A.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCarta1A.ForeColor = SystemColors.ControlText;
+            lblCarta1A.Location = new Point(7, 46);
+            lblCarta1A.Name = "lblCarta1A";
+            lblCarta1A.Size = new Size(52, 15);
+            lblCarta1A.TabIndex = 3;
+            lblCarta1A.Text = "Carta 1A";
             // 
             // lblMano1
             // 
@@ -300,119 +301,120 @@
             lblMano1.TabIndex = 2;
             lblMano1.Text = "Primera Mano";
             // 
-            // btnAlMazo2
+            // btnIrseDos
             // 
-            btnAlMazo2.BackColor = SystemColors.ActiveBorder;
-            btnAlMazo2.Location = new Point(400, 314);
-            btnAlMazo2.Name = "btnAlMazo2";
-            btnAlMazo2.Size = new Size(176, 23);
-            btnAlMazo2.TabIndex = 44;
-            btnAlMazo2.Text = "Me voy al mazo";
-            btnAlMazo2.UseVisualStyleBackColor = false;
+            btnIrseDos.BackColor = SystemColors.ActiveBorder;
+            btnIrseDos.Location = new Point(400, 314);
+            btnIrseDos.Name = "btnIrseDos";
+            btnIrseDos.Size = new Size(176, 23);
+            btnIrseDos.TabIndex = 44;
+            btnIrseDos.Text = "Me voy al mazo";
+            btnIrseDos.UseVisualStyleBackColor = false;
             // 
-            // btnQuiero2
+            // btnQuieroDos
             // 
-            btnQuiero2.BackColor = SystemColors.ActiveBorder;
-            btnQuiero2.Location = new Point(491, 285);
-            btnQuiero2.Name = "btnQuiero2";
-            btnQuiero2.Size = new Size(85, 23);
-            btnQuiero2.TabIndex = 43;
-            btnQuiero2.Text = "Quiero!";
-            btnQuiero2.UseVisualStyleBackColor = false;
+            btnQuieroDos.BackColor = SystemColors.ActiveBorder;
+            btnQuieroDos.Location = new Point(491, 285);
+            btnQuieroDos.Name = "btnQuieroDos";
+            btnQuieroDos.Size = new Size(85, 23);
+            btnQuieroDos.TabIndex = 43;
+            btnQuieroDos.Text = "Quiero!";
+            btnQuieroDos.UseVisualStyleBackColor = false;
             // 
-            // btnTruco2
+            // btnTrucoDos
             // 
-            btnTruco2.BackColor = SystemColors.ActiveBorder;
-            btnTruco2.Location = new Point(491, 256);
-            btnTruco2.Name = "btnTruco2";
-            btnTruco2.Size = new Size(85, 23);
-            btnTruco2.TabIndex = 42;
-            btnTruco2.Text = "Truco!";
-            btnTruco2.UseVisualStyleBackColor = false;
+            btnTrucoDos.BackColor = SystemColors.ActiveBorder;
+            btnTrucoDos.Location = new Point(491, 256);
+            btnTrucoDos.Name = "btnTrucoDos";
+            btnTrucoDos.Size = new Size(85, 23);
+            btnTrucoDos.TabIndex = 42;
+            btnTrucoDos.Text = "Truco!";
+            btnTrucoDos.UseVisualStyleBackColor = false;
             // 
-            // btnFlor2
+            // btnFlorDos
             // 
-            btnFlor2.BackColor = SystemColors.ActiveBorder;
-            btnFlor2.Location = new Point(491, 227);
-            btnFlor2.Name = "btnFlor2";
-            btnFlor2.Size = new Size(85, 23);
-            btnFlor2.TabIndex = 41;
-            btnFlor2.Text = "Flor!";
-            btnFlor2.UseVisualStyleBackColor = false;
+            btnFlorDos.BackColor = SystemColors.ActiveBorder;
+            btnFlorDos.Location = new Point(491, 227);
+            btnFlorDos.Name = "btnFlorDos";
+            btnFlorDos.Size = new Size(85, 23);
+            btnFlorDos.TabIndex = 41;
+            btnFlorDos.Text = "Flor!";
+            btnFlorDos.UseVisualStyleBackColor = false;
             // 
-            // btnFaltaEnvido2
+            // btnFaltaEnvidoDos
             // 
-            btnFaltaEnvido2.BackColor = SystemColors.ActiveBorder;
-            btnFaltaEnvido2.Location = new Point(400, 285);
-            btnFaltaEnvido2.Name = "btnFaltaEnvido2";
-            btnFaltaEnvido2.Size = new Size(85, 23);
-            btnFaltaEnvido2.TabIndex = 40;
-            btnFaltaEnvido2.Text = "Falta Envido!";
-            btnFaltaEnvido2.UseVisualStyleBackColor = false;
+            btnFaltaEnvidoDos.BackColor = SystemColors.ActiveBorder;
+            btnFaltaEnvidoDos.Location = new Point(400, 285);
+            btnFaltaEnvidoDos.Name = "btnFaltaEnvidoDos";
+            btnFaltaEnvidoDos.Size = new Size(85, 23);
+            btnFaltaEnvidoDos.TabIndex = 40;
+            btnFaltaEnvidoDos.Text = "Falta Envido!";
+            btnFaltaEnvidoDos.UseVisualStyleBackColor = false;
             // 
-            // btnRealEnvido2
+            // btnRealEnvidoDos
             // 
-            btnRealEnvido2.BackColor = SystemColors.ActiveBorder;
-            btnRealEnvido2.Location = new Point(400, 256);
-            btnRealEnvido2.Name = "btnRealEnvido2";
-            btnRealEnvido2.Size = new Size(85, 23);
-            btnRealEnvido2.TabIndex = 39;
-            btnRealEnvido2.Text = "Real Envido!";
-            btnRealEnvido2.UseVisualStyleBackColor = false;
+            btnRealEnvidoDos.BackColor = SystemColors.ActiveBorder;
+            btnRealEnvidoDos.Location = new Point(400, 256);
+            btnRealEnvidoDos.Name = "btnRealEnvidoDos";
+            btnRealEnvidoDos.Size = new Size(85, 23);
+            btnRealEnvidoDos.TabIndex = 39;
+            btnRealEnvidoDos.Text = "Real Envido!";
+            btnRealEnvidoDos.UseVisualStyleBackColor = false;
             // 
-            // btnEnvido2
+            // btnEnvidoDos
             // 
-            btnEnvido2.BackColor = SystemColors.ActiveBorder;
-            btnEnvido2.Location = new Point(400, 227);
-            btnEnvido2.Name = "btnEnvido2";
-            btnEnvido2.Size = new Size(85, 23);
-            btnEnvido2.TabIndex = 38;
-            btnEnvido2.Text = "Envido!";
-            btnEnvido2.UseVisualStyleBackColor = false;
+            btnEnvidoDos.BackColor = SystemColors.ActiveBorder;
+            btnEnvidoDos.Location = new Point(400, 227);
+            btnEnvidoDos.Name = "btnEnvidoDos";
+            btnEnvidoDos.Size = new Size(85, 23);
+            btnEnvidoDos.TabIndex = 38;
+            btnEnvidoDos.Text = "Envido!";
+            btnEnvidoDos.UseVisualStyleBackColor = false;
             // 
-            // btnAlMazo1
+            // btnIrseUno
             // 
-            btnAlMazo1.BackColor = SystemColors.ActiveBorder;
-            btnAlMazo1.Location = new Point(12, 314);
-            btnAlMazo1.Name = "btnAlMazo1";
-            btnAlMazo1.Size = new Size(176, 23);
-            btnAlMazo1.TabIndex = 37;
-            btnAlMazo1.Text = "Me voy al mazo";
-            btnAlMazo1.UseVisualStyleBackColor = false;
+            btnIrseUno.BackColor = SystemColors.ActiveBorder;
+            btnIrseUno.Location = new Point(12, 314);
+            btnIrseUno.Name = "btnIrseUno";
+            btnIrseUno.Size = new Size(176, 23);
+            btnIrseUno.TabIndex = 37;
+            btnIrseUno.Text = "Me voy al mazo";
+            btnIrseUno.UseVisualStyleBackColor = false;
             // 
-            // grpBxJugador2
+            // gbxJugadorDos
             // 
-            grpBxJugador2.Controls.Add(btnJugarNaipe2);
-            grpBxJugador2.Controls.Add(chkBxOcultarMano2);
-            grpBxJugador2.Controls.Add(rBtn4);
-            grpBxJugador2.Controls.Add(rBtn5);
-            grpBxJugador2.Controls.Add(rBtn6);
-            grpBxJugador2.Location = new Point(400, 10);
-            grpBxJugador2.Name = "grpBxJugador2";
-            grpBxJugador2.Size = new Size(176, 211);
-            grpBxJugador2.TabIndex = 35;
-            grpBxJugador2.TabStop = false;
-            grpBxJugador2.Text = "Jugador 2";
+            gbxJugadorDos.Controls.Add(btnJugarDos);
+            gbxJugadorDos.Controls.Add(chbOcultarDos);
+            gbxJugadorDos.Controls.Add(rBtn4);
+            gbxJugadorDos.Controls.Add(rBtn5);
+            gbxJugadorDos.Controls.Add(rBtn6);
+            gbxJugadorDos.Location = new Point(400, 10);
+            gbxJugadorDos.Name = "gbxJugadorDos";
+            gbxJugadorDos.Size = new Size(176, 211);
+            gbxJugadorDos.TabIndex = 35;
+            gbxJugadorDos.TabStop = false;
+            gbxJugadorDos.Text = "Jugador 2";
             // 
-            // btnJugarNaipe2
+            // btnJugarDos
             // 
-            btnJugarNaipe2.BackColor = SystemColors.ActiveBorder;
-            btnJugarNaipe2.Location = new Point(17, 168);
-            btnJugarNaipe2.Name = "btnJugarNaipe2";
-            btnJugarNaipe2.Size = new Size(75, 23);
-            btnJugarNaipe2.TabIndex = 27;
-            btnJugarNaipe2.Text = "Jugar carta";
-            btnJugarNaipe2.UseVisualStyleBackColor = false;
+            btnJugarDos.BackColor = SystemColors.ActiveBorder;
+            btnJugarDos.Location = new Point(17, 168);
+            btnJugarDos.Name = "btnJugarDos";
+            btnJugarDos.Size = new Size(75, 23);
+            btnJugarDos.TabIndex = 27;
+            btnJugarDos.Text = "Jugar carta";
+            btnJugarDos.UseVisualStyleBackColor = false;
             // 
-            // chkBxOcultarMano2
+            // chbOcultarDos
             // 
-            chkBxOcultarMano2.AutoSize = true;
-            chkBxOcultarMano2.Location = new Point(17, 32);
-            chkBxOcultarMano2.Name = "chkBxOcultarMano2";
-            chkBxOcultarMano2.Size = new Size(101, 19);
-            chkBxOcultarMano2.TabIndex = 26;
-            chkBxOcultarMano2.Text = "Ocultar Cartas";
-            chkBxOcultarMano2.UseVisualStyleBackColor = true;
+            chbOcultarDos.AutoSize = true;
+            chbOcultarDos.Location = new Point(17, 32);
+            chbOcultarDos.Name = "chbOcultarDos";
+            chbOcultarDos.Size = new Size(101, 19);
+            chbOcultarDos.TabIndex = 26;
+            chbOcultarDos.Text = "Ocultar Cartas";
+            chbOcultarDos.UseVisualStyleBackColor = true;
+            chbOcultarDos.CheckedChanged += chbOcultarDos_CheckedChanged;
             // 
             // rBtn4
             // 
@@ -447,39 +449,40 @@
             rBtn6.Text = "Carta 3";
             rBtn6.UseVisualStyleBackColor = true;
             // 
-            // grpBxJugador1
+            // gbxJugadorUno
             // 
-            grpBxJugador1.Controls.Add(btnJugarNaipe1);
-            grpBxJugador1.Controls.Add(chkBxOcultarMano1);
-            grpBxJugador1.Controls.Add(rBtn1);
-            grpBxJugador1.Controls.Add(rBtn2);
-            grpBxJugador1.Controls.Add(rBtn3);
-            grpBxJugador1.Location = new Point(12, 10);
-            grpBxJugador1.Name = "grpBxJugador1";
-            grpBxJugador1.Size = new Size(176, 211);
-            grpBxJugador1.TabIndex = 34;
-            grpBxJugador1.TabStop = false;
-            grpBxJugador1.Text = "Jugador 1";
+            gbxJugadorUno.Controls.Add(btnJugarUno);
+            gbxJugadorUno.Controls.Add(chbOcultarUno);
+            gbxJugadorUno.Controls.Add(rBtn1);
+            gbxJugadorUno.Controls.Add(rBtn2);
+            gbxJugadorUno.Controls.Add(rBtn3);
+            gbxJugadorUno.Location = new Point(12, 10);
+            gbxJugadorUno.Name = "gbxJugadorUno";
+            gbxJugadorUno.Size = new Size(176, 211);
+            gbxJugadorUno.TabIndex = 34;
+            gbxJugadorUno.TabStop = false;
+            gbxJugadorUno.Text = "Jugador 1";
             // 
-            // btnJugarNaipe1
+            // btnJugarUno
             // 
-            btnJugarNaipe1.BackColor = SystemColors.ActiveBorder;
-            btnJugarNaipe1.Location = new Point(20, 168);
-            btnJugarNaipe1.Name = "btnJugarNaipe1";
-            btnJugarNaipe1.Size = new Size(75, 23);
-            btnJugarNaipe1.TabIndex = 26;
-            btnJugarNaipe1.Text = "Jugar carta";
-            btnJugarNaipe1.UseVisualStyleBackColor = false;
+            btnJugarUno.BackColor = SystemColors.ActiveBorder;
+            btnJugarUno.Location = new Point(20, 168);
+            btnJugarUno.Name = "btnJugarUno";
+            btnJugarUno.Size = new Size(75, 23);
+            btnJugarUno.TabIndex = 26;
+            btnJugarUno.Text = "Jugar carta";
+            btnJugarUno.UseVisualStyleBackColor = false;
             // 
-            // chkBxOcultarMano1
+            // chbOcultarUno
             // 
-            chkBxOcultarMano1.AutoSize = true;
-            chkBxOcultarMano1.Location = new Point(20, 32);
-            chkBxOcultarMano1.Name = "chkBxOcultarMano1";
-            chkBxOcultarMano1.Size = new Size(101, 19);
-            chkBxOcultarMano1.TabIndex = 25;
-            chkBxOcultarMano1.Text = "Ocultar Cartas";
-            chkBxOcultarMano1.UseVisualStyleBackColor = true;
+            chbOcultarUno.AutoSize = true;
+            chbOcultarUno.Location = new Point(20, 32);
+            chbOcultarUno.Name = "chbOcultarUno";
+            chbOcultarUno.Size = new Size(101, 19);
+            chbOcultarUno.TabIndex = 25;
+            chbOcultarUno.Text = "Ocultar Cartas";
+            chbOcultarUno.UseVisualStyleBackColor = true;
+            chbOcultarUno.CheckedChanged += chbOcultarUno_CheckedChanged;
             // 
             // rBtn1
             // 
@@ -514,65 +517,65 @@
             rBtn3.Text = "Carta 3";
             rBtn3.UseVisualStyleBackColor = true;
             // 
-            // btnQuiero1
+            // btnQuieroUno
             // 
-            btnQuiero1.BackColor = SystemColors.ActiveBorder;
-            btnQuiero1.Location = new Point(103, 285);
-            btnQuiero1.Name = "btnQuiero1";
-            btnQuiero1.Size = new Size(85, 23);
-            btnQuiero1.TabIndex = 33;
-            btnQuiero1.Text = "Quiero!";
-            btnQuiero1.UseVisualStyleBackColor = false;
+            btnQuieroUno.BackColor = SystemColors.ActiveBorder;
+            btnQuieroUno.Location = new Point(103, 285);
+            btnQuieroUno.Name = "btnQuieroUno";
+            btnQuieroUno.Size = new Size(85, 23);
+            btnQuieroUno.TabIndex = 33;
+            btnQuieroUno.Text = "Quiero!";
+            btnQuieroUno.UseVisualStyleBackColor = false;
             // 
-            // btnTruco1
+            // btnTrucoUno
             // 
-            btnTruco1.BackColor = SystemColors.ActiveBorder;
-            btnTruco1.Location = new Point(103, 256);
-            btnTruco1.Name = "btnTruco1";
-            btnTruco1.Size = new Size(85, 23);
-            btnTruco1.TabIndex = 32;
-            btnTruco1.Text = "Truco!";
-            btnTruco1.UseVisualStyleBackColor = false;
+            btnTrucoUno.BackColor = SystemColors.ActiveBorder;
+            btnTrucoUno.Location = new Point(103, 256);
+            btnTrucoUno.Name = "btnTrucoUno";
+            btnTrucoUno.Size = new Size(85, 23);
+            btnTrucoUno.TabIndex = 32;
+            btnTrucoUno.Text = "Truco!";
+            btnTrucoUno.UseVisualStyleBackColor = false;
             // 
-            // btnFlor1
+            // btnFlorUno
             // 
-            btnFlor1.BackColor = SystemColors.ActiveBorder;
-            btnFlor1.Location = new Point(103, 227);
-            btnFlor1.Name = "btnFlor1";
-            btnFlor1.Size = new Size(85, 23);
-            btnFlor1.TabIndex = 31;
-            btnFlor1.Text = "Flor!";
-            btnFlor1.UseVisualStyleBackColor = false;
+            btnFlorUno.BackColor = SystemColors.ActiveBorder;
+            btnFlorUno.Location = new Point(103, 227);
+            btnFlorUno.Name = "btnFlorUno";
+            btnFlorUno.Size = new Size(85, 23);
+            btnFlorUno.TabIndex = 31;
+            btnFlorUno.Text = "Flor!";
+            btnFlorUno.UseVisualStyleBackColor = false;
             // 
-            // btnFaltaEnvido1
+            // btnFaltaEnvidoUno
             // 
-            btnFaltaEnvido1.BackColor = SystemColors.ActiveBorder;
-            btnFaltaEnvido1.Location = new Point(12, 285);
-            btnFaltaEnvido1.Name = "btnFaltaEnvido1";
-            btnFaltaEnvido1.Size = new Size(85, 23);
-            btnFaltaEnvido1.TabIndex = 30;
-            btnFaltaEnvido1.Text = "Falta Envido!";
-            btnFaltaEnvido1.UseVisualStyleBackColor = false;
+            btnFaltaEnvidoUno.BackColor = SystemColors.ActiveBorder;
+            btnFaltaEnvidoUno.Location = new Point(12, 285);
+            btnFaltaEnvidoUno.Name = "btnFaltaEnvidoUno";
+            btnFaltaEnvidoUno.Size = new Size(85, 23);
+            btnFaltaEnvidoUno.TabIndex = 30;
+            btnFaltaEnvidoUno.Text = "Falta Envido!";
+            btnFaltaEnvidoUno.UseVisualStyleBackColor = false;
             // 
-            // btnRealEnvido1
+            // btnRealEnvidoUno
             // 
-            btnRealEnvido1.BackColor = SystemColors.ActiveBorder;
-            btnRealEnvido1.Location = new Point(12, 256);
-            btnRealEnvido1.Name = "btnRealEnvido1";
-            btnRealEnvido1.Size = new Size(85, 23);
-            btnRealEnvido1.TabIndex = 29;
-            btnRealEnvido1.Text = "Real Envido!";
-            btnRealEnvido1.UseVisualStyleBackColor = false;
+            btnRealEnvidoUno.BackColor = SystemColors.ActiveBorder;
+            btnRealEnvidoUno.Location = new Point(12, 256);
+            btnRealEnvidoUno.Name = "btnRealEnvidoUno";
+            btnRealEnvidoUno.Size = new Size(85, 23);
+            btnRealEnvidoUno.TabIndex = 29;
+            btnRealEnvidoUno.Text = "Real Envido!";
+            btnRealEnvidoUno.UseVisualStyleBackColor = false;
             // 
-            // btnEnvido1
+            // btnEnvidoUno
             // 
-            btnEnvido1.BackColor = SystemColors.ActiveBorder;
-            btnEnvido1.Location = new Point(12, 227);
-            btnEnvido1.Name = "btnEnvido1";
-            btnEnvido1.Size = new Size(85, 23);
-            btnEnvido1.TabIndex = 28;
-            btnEnvido1.Text = "Envido!";
-            btnEnvido1.UseVisualStyleBackColor = false;
+            btnEnvidoUno.BackColor = SystemColors.ActiveBorder;
+            btnEnvidoUno.Location = new Point(12, 227);
+            btnEnvidoUno.Name = "btnEnvidoUno";
+            btnEnvidoUno.Size = new Size(85, 23);
+            btnEnvidoUno.TabIndex = 28;
+            btnEnvidoUno.Text = "Envido!";
+            btnEnvidoUno.UseVisualStyleBackColor = false;
             // 
             // FrmMesaTruco
             // 
@@ -583,35 +586,36 @@
             Controls.Add(lblFechaYHora);
             Controls.Add(lblCantoJugador2);
             Controls.Add(lblCantoJugador1);
-            Controls.Add(btnCancelarPartida);
-            Controls.Add(grpPosiciones);
-            Controls.Add(grpBxMesa);
-            Controls.Add(btnAlMazo2);
-            Controls.Add(btnQuiero2);
-            Controls.Add(btnTruco2);
-            Controls.Add(btnFlor2);
-            Controls.Add(btnFaltaEnvido2);
-            Controls.Add(btnRealEnvido2);
-            Controls.Add(btnEnvido2);
-            Controls.Add(btnAlMazo1);
-            Controls.Add(grpBxJugador2);
-            Controls.Add(grpBxJugador1);
-            Controls.Add(btnQuiero1);
-            Controls.Add(btnTruco1);
-            Controls.Add(btnFlor1);
-            Controls.Add(btnFaltaEnvido1);
-            Controls.Add(btnRealEnvido1);
-            Controls.Add(btnEnvido1);
+            Controls.Add(btnCancelarJuego);
+            Controls.Add(gbxPosiciones);
+            Controls.Add(gbxMesa);
+            Controls.Add(btnIrseDos);
+            Controls.Add(btnQuieroDos);
+            Controls.Add(btnTrucoDos);
+            Controls.Add(btnFlorDos);
+            Controls.Add(btnFaltaEnvidoDos);
+            Controls.Add(btnRealEnvidoDos);
+            Controls.Add(btnEnvidoDos);
+            Controls.Add(btnIrseUno);
+            Controls.Add(gbxJugadorDos);
+            Controls.Add(gbxJugadorUno);
+            Controls.Add(btnQuieroUno);
+            Controls.Add(btnTrucoUno);
+            Controls.Add(btnFlorUno);
+            Controls.Add(btnFaltaEnvidoUno);
+            Controls.Add(btnRealEnvidoUno);
+            Controls.Add(btnEnvidoUno);
             Name = "FrmMesaTruco";
             Text = "FrmMesa";
-            grpPosiciones.ResumeLayout(false);
-            grpPosiciones.PerformLayout();
-            grpBxMesa.ResumeLayout(false);
-            grpBxMesa.PerformLayout();
-            grpBxJugador2.ResumeLayout(false);
-            grpBxJugador2.PerformLayout();
-            grpBxJugador1.ResumeLayout(false);
-            grpBxJugador1.PerformLayout();
+            Load += FrmMesaTruco_Load;
+            gbxPosiciones.ResumeLayout(false);
+            gbxPosiciones.PerformLayout();
+            gbxMesa.ResumeLayout(false);
+            gbxMesa.PerformLayout();
+            gbxJugadorDos.ResumeLayout(false);
+            gbxJugadorDos.PerformLayout();
+            gbxJugadorUno.ResumeLayout(false);
+            gbxJugadorUno.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -621,50 +625,50 @@
         private Label lblFechaYHora;
         private Label lblCantoJugador2;
         private Label lblCantoJugador1;
-        private Button btnCancelarPartida;
-        private GroupBox grpPosiciones;
+        private Button btnCancelarJuego;
+        private GroupBox gbxPosiciones;
         private Label lblPosicion2;
         private Label lblPosicion1;
-        private GroupBox grpBxMesa;
-        private Label lblTantoJugador2;
-        private Label lblTantoJugador1;
+        private GroupBox gbxMesa;
+        private Label lblEnvidoDos;
+        private Label lblEnvidoUno;
         private Label lblTanto;
         private Label lblValorDelTruco;
-        private Label lblNaipe32;
+        private Label lblCarta3B;
         private Label lblValorTanto;
-        private Label lblNaipe31;
+        private Label lblCarta3A;
         private Label lblMano3;
-        private Label lblNaipe22;
-        private Label lblNaipe21;
+        private Label lblCarta2B;
+        private Label lblCarta2A;
         private Label lblMano2;
-        private Label lblNaipe12;
-        private Label lblNaipe11;
+        private Label lblCarta1B;
+        private Label lblCarta1A;
         private Label lblMano1;
-        private Button btnAlMazo2;
-        private Button btnQuiero2;
-        private Button btnTruco2;
-        private Button btnFlor2;
-        private Button btnFaltaEnvido2;
-        private Button btnRealEnvido2;
-        private Button btnEnvido2;
-        private Button btnAlMazo1;
-        private GroupBox grpBxJugador2;
-        private Button btnJugarNaipe2;
-        private CheckBox chkBxOcultarMano2;
+        private Button btnIrseDos;
+        private Button btnQuieroDos;
+        private Button btnTrucoDos;
+        private Button btnFlorDos;
+        private Button btnFaltaEnvidoDos;
+        private Button btnRealEnvidoDos;
+        private Button btnEnvidoDos;
+        private Button btnIrseUno;
+        private GroupBox gbxJugadorDos;
+        private Button btnJugarDos;
+        private CheckBox chbOcultarDos;
         private RadioButton rBtn4;
         private RadioButton rBtn5;
         private RadioButton rBtn6;
-        private GroupBox grpBxJugador1;
-        private Button btnJugarNaipe1;
-        private CheckBox chkBxOcultarMano1;
+        private GroupBox gbxJugadorUno;
+        private Button btnJugarUno;
+        private CheckBox chbOcultarUno;
         private RadioButton rBtn1;
         private RadioButton rBtn2;
         private RadioButton rBtn3;
-        private Button btnQuiero1;
-        private Button btnTruco1;
-        private Button btnFlor1;
-        private Button btnFaltaEnvido1;
-        private Button btnRealEnvido1;
-        private Button btnEnvido1;
+        private Button btnQuieroUno;
+        private Button btnTrucoUno;
+        private Button btnFlorUno;
+        private Button btnFaltaEnvidoUno;
+        private Button btnRealEnvidoUno;
+        private Button btnEnvidoUno;
     }
 }
