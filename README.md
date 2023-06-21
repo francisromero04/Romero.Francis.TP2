@@ -9,28 +9,28 @@ En términos generales, el programa que he desarrollado simula una partida entre
 En resumen, esta experiencia me ha brindado un amplio conocimiento sobre el concepto de multihilos, excepciones y delegados, los cuales se aplican a lo largo de todo el programa en diferentes aspectos de su gestión.
 
 ## DIAGRAMA DE CLASES
-![Diagrama de Clases](.\DiagramaDeClasesBibliotecaTruco.png)
-![Diagrama de Clases](.\DiagramaDeClasesTesteos.png)
+![Diagrama de Clases](./DiagramaDeClasesBibliotecaTruco.png)
+![Diagrama de Clases](./DiagramaDeClasesTesteos.png)
 
 ## Justificación técnica
 
-- MANEJO DE SQL
+- TEMA 1: MANEJO DE SQL
  - Se introduce una capa de almacenamiento permanente mediante el uso de una base de datos en SQL. Esto se utiliza para conservar un registro histórico de los datos de las partidas concluidas de dicho juego.
 
-- MANEJO DE EXCEPCIONES
+- TEMA 2: MANEJO DE EXCEPCIONES
  - Se utilizaron excepciones en el código para manejar situaciones excepcionales o errores que puedan ocurrir durante la ejecución del programa y tener la capacidad de manipular adecuadamente situaciones imprevistas.
 
-- PRUEBAS UNITARIAS
+- TEMA 3: PRUEBAS UNITARIAS
  - Se incluyeron pruebas unitarias para verificar el funcionamiento correcto de unidades individuales de código, es decir, las clases de mi biblioteca.
 
-- GENERICS
+- TEMA 4: GENERICS
  - Se implementó una clase generica en la cual logre manipular un mazo de cartas de manera personalizada. A su vez, se añadió una clase de serializacion de tipo generica.
 
-- INTERFACES
+- TEMA 5: INTERFACES
  - Se utilizaron interfaces para mejorar la flexibilidad del sistema y el ordenamiento del código. 
 
-- DELEGADOS Y EVENTOS
+- TEMA 6: DELEGADOS Y EVENTOS
  - Se introdujo un delegado personalizado que es utilizado en conjunto con un evento.
 
-- TASK
+- TEMA 7: TASK
  - Generacion de subprocesos y teniendo la posibilidad de mostrar la hora, actualizandose en tiempo y forma real sin tomar el hilo principal.
