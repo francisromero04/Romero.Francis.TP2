@@ -17,19 +17,22 @@ namespace Forms_Truco
             InitializeComponent();
         }
 
-
         /// <summary>
-        /// Instancia una nueva mesa de Truco Simulator
+        /// Instancia una nueva mesa de Truco Simulador
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void CrearPartidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmCrearMesa set = new FrmCrearMesa();
-
             set.MdiParent = this;
-
             set.Show();
+        }
+
+        private void historialDeResultadosSQLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstadisticaPartidas formulario = new FrmEstadisticaPartidas();
+            formulario.ShowDialog();
         }
     }
 }

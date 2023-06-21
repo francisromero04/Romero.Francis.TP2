@@ -35,7 +35,7 @@ namespace Biblioteca_Truco
         {          
             try
             {
-                ConexionSQL.comandoTexto.CommandText = "SELECT * FROM TablaPartidas";
+                ConexionSQL.comandoTexto.CommandText = "SELECT * FROM Partidas";
                 ConexionSQL.conexion.Open();
                 ConexionSQL.dataReader = comandoTexto.ExecuteReader();
             }
@@ -53,11 +53,11 @@ namespace Biblioteca_Truco
                 Jugador ganador = partida.CalcularGanador();
                 string ganadorNombre = (ganador == null) ? "Empate" : ganador.NombreJugador;
 
-                comandoTexto.CommandText = "INSERT INTO TablaPartidas VALUES (@JugadorUno, @PuntosJugadorUno, @JugadorDos, @PuntosJugadorDos, @Ganador)";
-                comandoTexto.Parameters.AddWithValue("@JugadorUno", partida.JugadorUno.NombreJugador);
-                comandoTexto.Parameters.AddWithValue("@PuntosJugadorUno", partida.JugadorUno.Puntos);
-                comandoTexto.Parameters.AddWithValue("@JugadorDos", partida.JugadorDos.NombreJugador);
-                comandoTexto.Parameters.AddWithValue("@PuntosJugadorDos", partida.JugadorDos.Puntos);
+                comandoTexto.CommandText = "INSERT INTO Partidas VALUES (@Jugador1, @PuntosJugador1, @Jugador2, @PuntosJugador2, @Ganador)";
+                comandoTexto.Parameters.AddWithValue("@Jugador1", partida.JugadorUno.NombreJugador);
+                comandoTexto.Parameters.AddWithValue("@PuntosJugador1", partida.JugadorUno.Puntos);
+                comandoTexto.Parameters.AddWithValue("@Jugador2", partida.JugadorDos.NombreJugador);
+                comandoTexto.Parameters.AddWithValue("@PuntosJugador2", partida.JugadorDos.Puntos);
                 comandoTexto.Parameters.AddWithValue("@Ganador", ganadorNombre);
 
                 conexion.Open();

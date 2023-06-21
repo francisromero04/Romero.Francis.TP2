@@ -63,8 +63,9 @@
             // historialDeResultadosSQLToolStripMenuItem
             // 
             historialDeResultadosSQLToolStripMenuItem.Name = "historialDeResultadosSQLToolStripMenuItem";
-            historialDeResultadosSQLToolStripMenuItem.Size = new Size(219, 22);
-            historialDeResultadosSQLToolStripMenuItem.Text = "Historial de Resultados (SQL)";
+            historialDeResultadosSQLToolStripMenuItem.Size = new Size(230, 22);
+            historialDeResultadosSQLToolStripMenuItem.Text = "Estadisticas Resultados Partidas";
+            historialDeResultadosSQLToolStripMenuItem.Click += historialDeResultadosSQLToolStripMenuItem_Click;
             // 
             // FrmInicio
             // 
