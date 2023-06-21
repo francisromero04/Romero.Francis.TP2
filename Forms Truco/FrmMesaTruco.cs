@@ -595,7 +595,6 @@ namespace Forms_Truco
             partida.RondaPartida.Retrucar(partida.JugadorUno, partida.JugadorDos);
             lblCantoUno.Text = btnTrucoUno.Text;
             AccionCambiar();
-            SerializadoraJSON<Mano>.SerializarJson(partida.JugadorUno.Mano, "Conteo_Trucos_Cantados.json");
         }
 
         private void btnTrucoDos_Click(object sender, EventArgs e)
@@ -604,7 +603,6 @@ namespace Forms_Truco
             partida.RondaPartida.Retrucar(partida.JugadorDos, partida.JugadorUno);
             lblCantoDos.Text = btnTrucoDos.Text;
             AccionCambiar();
-            SerializadoraJSON<Mano>.SerializarJson(partida.JugadorUno.Mano, "Conteo_Trucos_Cantados.json");
         }
 
         private void btnQuieroUno_Click(object sender, EventArgs e)

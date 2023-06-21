@@ -53,4 +53,3 @@ C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windo
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.FrmMesaTruco.resources
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.FrmEstadisticaPartidas.resources
 C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.FrmEstadisticaCartasPorMano.resources
-C:\Users\User\source\repos\Romero.Francis.TP2\Forms Truco\obj\Debug\net6.0-windows\Forms_Truco.FrmEstadisticaTrucosCantados.resources
