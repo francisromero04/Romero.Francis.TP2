@@ -26,7 +26,7 @@ Esta experiencia me ha brindado un amplio conocimiento sobre el concepto de mult
 -  TEMA 3: PRUEBAS UNITARIAS
   -  Se incluyeron pruebas unitarias para verificar el funcionamiento correcto de unidades individuales de código, es decir, las clases de mi biblioteca.
 
--  TEMA 4: GENERICS 
+-  TEMA 4: GENERICS
   -  Se implementó una clase generica en la cual logre manipular un mazo de cartas de manera personalizada. A su vez, se añadió una clase de serializacion de tipo generica.
 
 -  TEMA 5: INTERFACES
