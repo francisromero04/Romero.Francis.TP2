@@ -6,10 +6,13 @@ Mi nombre es Francis Romero y tengo 19 años. Actualmente estoy cursando el segu
 
 En términos generales, el programa que he desarrollado simula una partida entre dos jugadores, con hasta 4 manos, y también brinda la posibilidad de crear un número indeterminado de mesas en las cuales se llevan a cabo partidas diferentes. Además, el programa permite visualizar estadísticas relacionadas con el juego. Para almacenar los datos importantes, he utilizado una base de datos a través de SQL Management Studio, lo cual garantiza la persistencia de dichos datos.
 
-En resumen, esta experiencia me ha brindado un amplio conocimiento sobre el concepto de multihilos, excepciones y delegados, los cuales se aplican a lo largo de todo el programa en diferentes aspectos de su gestión.
+## Resumen
+
+Esta experiencia me ha brindado un amplio conocimiento sobre el concepto de multihilos, excepciones y delegados, los cuales se aplican a lo largo de todo el programa en diferentes aspectos de su gestión.
 
 ## DIAGRAMA DE CLASES
 ![Diagrama de Clases](./DiagramaDeClasesBiblioteca.png)
+
 ![Diagrama de Clases](./DiagramaDeClasesTesteos.png)
 
 ## Justificación técnica
