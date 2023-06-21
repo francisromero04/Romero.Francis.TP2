@@ -272,7 +272,7 @@ namespace Biblioteca_Truco
             }
         }
 
-       public void Declinar(Jugador jugadorPasivo)
+       public void Rechazar(Jugador jugadorPasivo)
        {
             if (tantoCantado)
             {
@@ -367,7 +367,7 @@ namespace Biblioteca_Truco
             return ret;
         }
 
-        public void FinalizarRonda()
+        public void CierreDeRonda()
         {
             if (ganadorTanto != null)
             {
@@ -381,6 +381,7 @@ namespace Biblioteca_Truco
             string puesto1 = $"{partida.JugadorUno.NombreJugador} -> {partida.JugadorUno.Puntos} pts.";
             string puesto2 = $"{partida.JugadorDos.NombreJugador} -> {partida.JugadorDos.Puntos} pts.";
             string ret;
+
             if (partida.JugadorUno.Puntos < partida.JugadorDos.Puntos)
             {
                 puesto2 = $"{partida.JugadorUno.NombreJugador} -> {partida.JugadorUno.Puntos} pts.";

@@ -1,19 +1,18 @@
-﻿using Biblioteca_Truco;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Biblioteca_Truco;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Forms_Truco
 {
-    public partial class FrmMesaTruco : Form
+    public partial class FrmMesaTruco : Form, IAccionesRonda
     {
         #region ATRIBUTOS
 
@@ -31,12 +30,12 @@ namespace Forms_Truco
         {
             InitializeComponent();
             this.partida = new Partida(jugadorUno, jugadorDos);
-            this.controlesJugadorUno = new Control[9] { this.btnJugarUno, this.btnEnvidoUno, this.btnFlorUno, this.btnRealEnvidoUno, this.btnTrucoUno, this.btnFaltaEnvidoUno, this.btnQuieroUno, this.btnIrseUno, this.lblCantoUno };
-            this.controlesJugadorDos = new Control[9] { this.btnJugarDos, this.btnEnvidoDos, this.btnFlorDos, this.btnRealEnvidoDos, this.btnTrucoDos, this.btnFaltaEnvidoDos, this.btnQuieroDos, this.btnIrseDos, this.lblCantoDos };
-            this.cartasManoJugadorUno = new RadioButton[3] { this.rBtnCartaUno, this.rBtnCartaDos, this.rBtnCartaTres };
-            this.cartasManoJugadorDos = new RadioButton[3] { this.rBtnCartaCuatro, this.rBtnCartaCinco, this.rBtnCartaSeis };
-            this.cartasMesaJugadorUno = new Label[3] { this.lblCarta1A, this.lblCarta2A, this.lblCarta3A };
-            this.cartasMesaJugadorDos = new Label[3] { this.lblCarta1B, this.lblCarta2B, this.lblCarta3B };
+            this.controlesJugadorUno = new Control[8] { btnJugarUno, btnEnvidoUno, btnRealEnvidoUno, btnTrucoUno, btnFaltaEnvidoUno, btnQuieroUno, btnIrseUno, lblCantoUno };
+            this.controlesJugadorDos = new Control[8] { btnJugarDos, btnEnvidoDos, btnRealEnvidoDos, btnTrucoDos, btnFaltaEnvidoDos, btnQuieroDos, btnIrseDos, lblCantoDos };
+            this.cartasManoJugadorUno = new RadioButton[3] { rBtnCartaUno, rBtnCartaDos, rBtnCartaTres };
+            this.cartasManoJugadorDos = new RadioButton[3] { rBtnCartaCuatro, rBtnCartaCinco, rBtnCartaSeis };
+            this.cartasMesaJugadorUno = new Label[3] { lblCarta1A, lblCarta2A, lblCarta3A };
+            this.cartasMesaJugadorDos = new Label[3] { lblCarta1B, lblCarta2B, lblCarta3B };
             Hora.frecuenciaExcedida += RefrescarHora;
         }
 
@@ -58,13 +57,13 @@ namespace Forms_Truco
 
         private void MostrarPosiciones()
         {
-            this.lblPosicion1.Text = this.partida.RondaPartida.MostrarPosicion(this.partida, 1);
-            this.lblPosicion2.Text = this.partida.RondaPartida.MostrarPosicion(this.partida, 2);
+            lblPosicion1.Text = partida.RondaPartida.MostrarPosicion(partida, 1);
+            lblPosicion2.Text = partida.RondaPartida.MostrarPosicion(partida, 2);
         }
 
         private void MostrarCartasSeleccionadas()
         {
-            foreach (RadioButton item in this.cartasManoJugadorUno)
+            foreach (RadioButton item in cartasManoJugadorUno)
             {
                 if (item.Enabled)
                 {
@@ -72,7 +71,7 @@ namespace Forms_Truco
                     break;
                 }
             }
-            foreach (RadioButton item in this.cartasManoJugadorDos)
+            foreach (RadioButton item in cartasManoJugadorDos)
             {
                 if (item.Enabled)
                 {
@@ -85,44 +84,47 @@ namespace Forms_Truco
         private void HabilitarJugador(Jugador jugador, Control[] controles)
         {
             MostrarPosiciones();
+            controles[6].Text = "Me voy al mazo!";
             MostrarCartasSeleccionadas();
 
-            if (this.partida.RondaPartida.TrucoCantado)
+            if (partida.RondaPartida.ValorDelTrucoSiSeAcepta < 4 && jugador.PoseeQuiero)
             {
-                controles[6].Enabled = true;
-            }
-            else if (this.partida.RondaPartida.TantoCantado && !this.partida.RondaPartida.TantoJugado)
-            {
-                controles[7].Text = "No quiero!";
-
-                if (this.partida.JugadorUno.Mano.TieneFlor)
+                controles[3].Enabled = true;
+                if (partida.RondaPartida.ValorDelTrucoSiSeAcepta == 3)
                 {
-                    controles[2].Enabled = true;
+                    controles[3].Text = "Vale Cuatro!";
+                }
+                else if (partida.RondaPartida.ValorDelTrucoSiSeAcepta == 2)
+                {
+                    controles[3].Text = "Retruco!";
                 }
                 else
                 {
-                    controles[6].Enabled = true;
-                    HabilitarEnvido(controles);
+                    controles[3].Text = "Truco!";
                 }
+            }
+
+            if (partida.RondaPartida.TrucoCantado)
+            {
+                controles[5].Enabled = true;
+            }
+            else if (partida.RondaPartida.TantoCantado && !partida.RondaPartida.TantoJugado)
+            {
+                controles[6].Text = "No quiero!";
+                controles[6].Enabled = true;
+                HabilitarEnvido(controles);
             }
             else
             {
-                if (this.partida.RondaPartida.NumeroDeTurno == 1 && !this.partida.RondaPartida.TantoJugado)
+                if (partida.RondaPartida.NumeroDeTurno == 1 && !partida.RondaPartida.TantoJugado)
                 {
-                    if (jugador.Mano.TieneFlor)
-                    {
-                        controles[2].Enabled = true;
-                    }
-                    else
-                    {
-                        HabilitarEnvido(controles);
-                    }
+                    HabilitarEnvido(controles);
                 }
                 controles[0].Enabled = true;
             }
 
-            controles[7].Enabled = true; //HABILITA ME VOY AL MAZO
-            controles[8].Text = ""; //LIMPIA ETIQUETA CANTADO
+            controles[6].Enabled = true; //HABILITA ME VOY AL MAZO
+            controles[7].Text = ""; //LIMPIA ETIQUETA CANTADO
         }
 
         private void DeshabilitarJugador(Jugador jugador, Control[] controles)
@@ -131,7 +133,20 @@ namespace Forms_Truco
             {
                 control.Enabled = false;
             }
-            controles[8].Enabled = true;
+            controles[7].Enabled = true;
+        }
+
+        private void MostrarCartas(GroupBox gbx, Jugador jugador)
+        {
+            int i = 0;
+            foreach (object item in gbx.Controls)
+            {
+                if (item is RadioButton)
+                {
+                    ((RadioButton)item).Text = jugador.Mano.Cartas[i].ToString();
+                    i++;
+                }
+            }
         }
 
         #endregion
@@ -202,7 +217,7 @@ namespace Forms_Truco
 
         #endregion
 
-        #region LOGICA JUGAR
+        #region LOGICA JUEGO
 
         private void JugarCarta(Carta carta)
         {
@@ -283,7 +298,7 @@ namespace Forms_Truco
 
         public void CierreDeRonda()
         {
-            partida.RondaPartida.FinalizarRonda();
+            partida.RondaPartida.CierreDeRonda();
             MessageBox.Show(partida.RondaPartida.ToString(), "Resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
             RefrescarControles();
 
@@ -297,30 +312,43 @@ namespace Forms_Truco
             FrmMesaTruco_Load(this, EventArgs.Empty);
         }
 
-        void EvaluarGanadorTurno()
+        void MostrarGanadora(int ganadora)
         {
-            int valorCartaJugadorUno = partida.RondaPartida.CartaJugadorUno is not null ? partida.RondaPartida.CartaJugadorUno.ValorCarta : 0;
-            int valorCartaJugadorDos = partida.RondaPartida.CartaJugadorDos is not null ? partida.RondaPartida.CartaJugadorDos.ValorCarta : 0;
+            int indiceAColorear = partida.RondaPartida.NumeroDeTurno - 1;
 
-            if (valorCartaJugadorUno > valorCartaJugadorDos)
+            if (ganadora == 1 || ganadora == 3)
+            {
+                cartasMesaJugadorUno[indiceAColorear].ForeColor = System.Drawing.Color.Green;
+                cartasMesaJugadorUno[indiceAColorear].Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            }
+            if (ganadora == 2 || ganadora == 3)
+            {
+                cartasMesaJugadorDos[indiceAColorear].ForeColor = System.Drawing.Color.Green;
+                cartasMesaJugadorDos[indiceAColorear].Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            }
+        }
+
+        void AccionFinalizar()
+        {
+            if (partida.RondaPartida.CartaJugadorUno.ValorCarta > partida.RondaPartida.CartaJugadorDos.ValorCarta)
             {
                 if (partida.RondaPartida.GanaPrimera == null)
                 {
                     partida.RondaPartida.GanaPrimera = partida.JugadorUno;
                 }
-
                 partida.RondaPartida.ManosGanadasJugadorUno++;
+                MostrarGanadora(1);
                 partida.JugadorUno.EsSuTurno = true;
                 partida.JugadorDos.EsSuTurno = false;
             }
-            else if (valorCartaJugadorUno < valorCartaJugadorDos)
+            else if (partida.RondaPartida.CartaJugadorUno.ValorCarta < partida.RondaPartida.CartaJugadorDos.ValorCarta)
             {
                 if (partida.RondaPartida.GanaPrimera == null)
                 {
                     partida.RondaPartida.GanaPrimera = partida.JugadorDos;
                 }
-
                 partida.RondaPartida.ManosGanadasJugadorDos++;
+                MostrarGanadora(2);
                 partida.JugadorUno.EsSuTurno = false;
                 partida.JugadorDos.EsSuTurno = true;
             }
@@ -328,53 +356,46 @@ namespace Forms_Truco
             {
                 partida.RondaPartida.ManosGanadasJugadorUno++;
                 partida.RondaPartida.ManosGanadasJugadorDos++;
+                MostrarGanadora(3);
                 partida.JugadorUno.EsSuTurno = partida.JugadorUno.EsJugadorMano;
                 partida.JugadorDos.EsSuTurno = partida.JugadorDos.EsJugadorMano;
             }
-        }
 
-        void AccionFinalizar()
-        {
-            EvaluarGanadorTurno();
             partida.RondaPartida.NumeroDeTurno++;
             partida.RondaPartida.CartaJugadorUno = null;
             partida.RondaPartida.CartaJugadorDos = null;
-
             RefrescarControles();
 
-            int cantidadVictoriasUno = partida.RondaPartida.ManosGanadasJugadorUno;
-            int cantidadVictoriasDos = partida.RondaPartida.ManosGanadasJugadorDos;
+            int ganadas1 = partida.RondaPartida.ManosGanadasJugadorUno;
+            int ganadas2 = partida.RondaPartida.ManosGanadasJugadorDos;
 
-            if (cantidadVictoriasUno >= 2 && cantidadVictoriasUno > cantidadVictoriasDos)
+            if (ganadas1 > ganadas2 && ganadas1 >= 2)
             {
                 partida.RondaPartida.GanadorTruco = partida.JugadorUno;
                 CierreDeRonda();
-                return;
             }
-
-            if (cantidadVictoriasDos >= 2 && cantidadVictoriasDos > cantidadVictoriasUno)
+            else if (ganadas2 > ganadas1 && ganadas2 >= 2)
             {
                 partida.RondaPartida.GanadorTruco = partida.JugadorDos;
                 CierreDeRonda();
-                return;
             }
-
-            if (cantidadVictoriasUno == 2 && cantidadVictoriasDos == 2 && partida.RondaPartida.GanaPrimera != null)
+            else if (ganadas1 == 2 && ganadas2 == 2)
             {
-                partida.RondaPartida.GanadorTruco = partida.RondaPartida.GanaPrimera;
-                CierreDeRonda();
-                return;
+                if (partida.RondaPartida.GanaPrimera is not null)
+                {
+                    partida.RondaPartida.GanadorTruco = partida.RondaPartida.GanaPrimera;
+                    CierreDeRonda();
+                }
             }
-
-            if (cantidadVictoriasUno == 3 && cantidadVictoriasDos == 3)
+            else if (ganadas1 == 3 && ganadas2 == 3)
             {
                 if (partida.JugadorUno.EsJugadorMano)
                 {
-                    partida.RondaPartida.GanadorTruco = partida.JugadorUno;
+                    partida.RondaPartida.GanadorTruco = this.partida.JugadorUno;
                 }
                 else
                 {
-                    partida.RondaPartida.GanadorTruco = partida.JugadorDos;
+                    partida.RondaPartida.GanadorTruco = this.partida.JugadorDos;
                 }
                 CierreDeRonda();
             }
@@ -409,6 +430,63 @@ namespace Forms_Truco
             }
         }
 
+        private void GuardarCantante(Jugador jugadorCantante)
+        {
+            if (!partida.RondaPartida.TantoCantado && !partida.RondaPartida.TrucoCantado)
+            {
+                partida.RondaPartida.Canto = jugadorCantante;
+            }
+        }
+
+        void RefrescarTantos()
+        {
+            lblTanto.Visible = true;
+            lblEnvidoUno.Text = partida.JugadorUno.Mano.Tanto.ToString();
+            lblEnvidoDos.Text = partida.JugadorDos.Mano.Tanto.ToString();
+
+            if (partida.JugadorUno.Mano.Tanto > partida.JugadorDos.Mano.Tanto || partida.JugadorUno.EsJugadorMano && partida.JugadorUno.Mano.Tanto == partida.JugadorDos.Mano.Tanto)
+            {
+                lblEnvidoUno.ForeColor = System.Drawing.Color.Green;
+                lblEnvidoUno.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            }
+            else
+            {
+                lblEnvidoDos.ForeColor = System.Drawing.Color.Green;
+                lblEnvidoDos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            }
+            RefrescarControles();
+        }
+
+        public void Aceptar(Jugador jugadorUno, Jugador jugadorDos)
+        {
+            if (partida.RondaPartida.TantoCantado)
+            {
+                RefrescarTantos();
+            }
+            partida.RondaPartida.Aceptar(jugadorUno, jugadorDos);
+
+            while (!partida.RondaPartida.Canto.EsSuTurno) // retorna al turno del jugador que inició un canto luego de que este se definiera
+            {
+                AccionCambiar();
+            }
+            RefrescarControles();
+        }
+
+        public void Rechazar(Jugador jugadorCantante)
+        {
+            partida.RondaPartida.Rechazar(jugadorCantante);
+            if (!partida.RondaPartida.TantoCantado)
+            {
+                CierreDeRonda();
+            }
+            else
+            {
+                AccionCambiar();
+                partida.RondaPartida.TantoCantado = false;
+            }
+            RefrescarControles();
+        }
+
         #endregion
 
         #region EVENTOS
@@ -428,6 +506,9 @@ namespace Forms_Truco
                 item.Enabled = true;
             }
 
+            MostrarCartas(gbxJugadorUno, partida.JugadorUno);
+            MostrarCartas(gbxJugadorDos, partida.JugadorDos);
+            RefrescarControles();
             RefrescarHora();
             VaciarControles();
         }
@@ -436,7 +517,7 @@ namespace Forms_Truco
         {
             if (MessageBox.Show("Si opta por cancelar la partida, no se almacenará en la base de datos. ¿Está completamente seguro de que desea cancelar ? ", "Atención", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -458,6 +539,90 @@ namespace Forms_Truco
             {
                 AccionesTurnoMesa();
             }
+        }
+
+        private void btnEnvidoUno_Click(object sender, EventArgs e)
+        {
+            GuardarCantante(partida.JugadorUno);
+            partida.RondaPartida.ReavivarEnvido(0, 2);
+            lblCantoUno.Text = "¡Te canto Envido!";
+            AccionCambiar();
+        }
+
+        private void btnEnvidoDos_Click(object sender, EventArgs e)
+        {
+            GuardarCantante(partida.JugadorDos);
+            partida.RondaPartida.ReavivarEnvido(0, 2);
+            lblCantoDos.Text = "¡Te canto Envido!";
+            AccionCambiar();
+        }
+
+        private void btnRealEnvidoUno_Click(object sender, EventArgs e)
+        {
+            GuardarCantante(partida.JugadorUno);
+            partida.RondaPartida.ReavivarEnvido(1, 3);
+            lblCantoUno.Text = "¡Real Envido compa!";
+            AccionCambiar();
+        }
+
+        private void btnRealEnvidoDos_Click(object sender, EventArgs e)
+        {
+            GuardarCantante(partida.JugadorDos);
+            partida.RondaPartida.ReavivarEnvido(1, 3);
+            lblCantoDos.Text = "¡Real Envido compa!";
+            AccionCambiar();
+        }
+
+        private void btnFaltaEnvidoUno_Click(object sender, EventArgs e)
+        {
+            GuardarCantante(partida.JugadorUno);
+            partida.RondaPartida.ReavivarEnvido(partida);
+            lblCantoUno.Text = "Falta Envido!";
+            AccionCambiar();
+        }
+
+        private void btnFaltaEnvidoDos_Click(object sender, EventArgs e)
+        {
+            GuardarCantante(partida.JugadorDos);
+            partida.RondaPartida.ReavivarEnvido(partida);
+            lblCantoDos.Text = "Falta Envido!";
+            AccionCambiar();
+        }
+
+        private void btnTrucoUno_Click(object sender, EventArgs e)
+        {
+            GuardarCantante(partida.JugadorUno);
+            partida.RondaPartida.Retrucar(partida.JugadorUno, partida.JugadorDos);
+            lblCantoUno.Text = btnTrucoUno.Text;
+            AccionCambiar();
+        }
+
+        private void btnTrucoDos_Click(object sender, EventArgs e)
+        {
+            GuardarCantante(partida.JugadorDos);
+            partida.RondaPartida.Retrucar(partida.JugadorDos, partida.JugadorUno);
+            lblCantoDos.Text = btnTrucoDos.Text;
+            AccionCambiar();
+        }
+
+        private void btnQuieroUno_Click(object sender, EventArgs e)
+        {
+            Aceptar(partida.JugadorUno, partida.JugadorDos);
+        }
+
+        private void btnQuieroDos_Click(object sender, EventArgs e)
+        {
+            Aceptar(partida.JugadorDos, partida.JugadorUno);
+        }
+
+        private void btnIrseUno_Click(object sender, EventArgs e)
+        {
+            Rechazar(partida.JugadorDos);
+        }
+
+        private void btnIrseDos_Click(object sender, EventArgs e)
+        {
+            Rechazar(partida.JugadorUno);
         }
 
         #endregion

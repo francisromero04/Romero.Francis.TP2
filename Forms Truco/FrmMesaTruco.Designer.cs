@@ -53,7 +53,6 @@
             btnIrseDos = new Button();
             btnQuieroDos = new Button();
             btnTrucoDos = new Button();
-            btnFlorDos = new Button();
             btnFaltaEnvidoDos = new Button();
             btnRealEnvidoDos = new Button();
             btnEnvidoDos = new Button();
@@ -70,7 +69,6 @@
             rBtnCartaTres = new RadioButton();
             btnQuieroUno = new Button();
             btnTrucoUno = new Button();
-            btnFlorUno = new Button();
             btnFaltaEnvidoUno = new Button();
             btnRealEnvidoUno = new Button();
             btnEnvidoUno = new Button();
@@ -92,22 +90,22 @@
             // lblCantoDos
             // 
             lblCantoDos.AutoSize = true;
-            lblCantoDos.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCantoDos.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCantoDos.Location = new Point(400, 394);
             lblCantoDos.Name = "lblCantoDos";
-            lblCantoDos.Size = new Size(151, 25);
+            lblCantoDos.Size = new Size(57, 20);
             lblCantoDos.TabIndex = 49;
-            lblCantoDos.Text = "Falta Envido!";
+            lblCantoDos.Text = "Canto";
             // 
             // lblCantoUno
             // 
             lblCantoUno.AutoSize = true;
-            lblCantoUno.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCantoUno.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblCantoUno.Location = new Point(12, 394);
             lblCantoUno.Name = "lblCantoUno";
-            lblCantoUno.Size = new Size(151, 25);
+            lblCantoUno.Size = new Size(57, 20);
             lblCantoUno.TabIndex = 48;
-            lblCantoUno.Text = "Falta Envido!";
+            lblCantoUno.Text = "Canto";
             // 
             // btnCancelarJuego
             // 
@@ -301,83 +299,80 @@
             // 
             // btnIrseDos
             // 
-            btnIrseDos.BackColor = SystemColors.ActiveBorder;
+            btnIrseDos.BackColor = SystemColors.ControlDark;
             btnIrseDos.Location = new Point(400, 314);
             btnIrseDos.Name = "btnIrseDos";
             btnIrseDos.Size = new Size(176, 23);
             btnIrseDos.TabIndex = 44;
             btnIrseDos.Text = "Me voy al mazo";
             btnIrseDos.UseVisualStyleBackColor = false;
+            btnIrseDos.Click += btnIrseDos_Click;
             // 
             // btnQuieroDos
             // 
-            btnQuieroDos.BackColor = SystemColors.ActiveBorder;
-            btnQuieroDos.Location = new Point(491, 285);
+            btnQuieroDos.BackColor = SystemColors.ControlDark;
+            btnQuieroDos.Location = new Point(450, 285);
             btnQuieroDos.Name = "btnQuieroDos";
             btnQuieroDos.Size = new Size(85, 23);
             btnQuieroDos.TabIndex = 43;
             btnQuieroDos.Text = "Quiero!";
             btnQuieroDos.UseVisualStyleBackColor = false;
+            btnQuieroDos.Click += btnQuieroDos_Click;
             // 
             // btnTrucoDos
             // 
-            btnTrucoDos.BackColor = SystemColors.ActiveBorder;
+            btnTrucoDos.BackColor = SystemColors.ControlDark;
             btnTrucoDos.Location = new Point(491, 256);
             btnTrucoDos.Name = "btnTrucoDos";
             btnTrucoDos.Size = new Size(85, 23);
             btnTrucoDos.TabIndex = 42;
             btnTrucoDos.Text = "Truco!";
             btnTrucoDos.UseVisualStyleBackColor = false;
-            // 
-            // btnFlorDos
-            // 
-            btnFlorDos.BackColor = SystemColors.ActiveBorder;
-            btnFlorDos.Location = new Point(491, 227);
-            btnFlorDos.Name = "btnFlorDos";
-            btnFlorDos.Size = new Size(85, 23);
-            btnFlorDos.TabIndex = 41;
-            btnFlorDos.Text = "Flor!";
-            btnFlorDos.UseVisualStyleBackColor = false;
+            btnTrucoDos.Click += btnTrucoDos_Click;
             // 
             // btnFaltaEnvidoDos
             // 
-            btnFaltaEnvidoDos.BackColor = SystemColors.ActiveBorder;
-            btnFaltaEnvidoDos.Location = new Point(400, 285);
+            btnFaltaEnvidoDos.BackColor = SystemColors.ControlDark;
+            btnFaltaEnvidoDos.Location = new Point(400, 256);
             btnFaltaEnvidoDos.Name = "btnFaltaEnvidoDos";
             btnFaltaEnvidoDos.Size = new Size(85, 23);
             btnFaltaEnvidoDos.TabIndex = 40;
             btnFaltaEnvidoDos.Text = "Falta Envido!";
             btnFaltaEnvidoDos.UseVisualStyleBackColor = false;
+            btnFaltaEnvidoDos.Click += btnFaltaEnvidoDos_Click;
             // 
             // btnRealEnvidoDos
             // 
-            btnRealEnvidoDos.BackColor = SystemColors.ActiveBorder;
-            btnRealEnvidoDos.Location = new Point(400, 256);
+            btnRealEnvidoDos.BackColor = SystemColors.ControlDark;
+            btnRealEnvidoDos.Location = new Point(492, 227);
             btnRealEnvidoDos.Name = "btnRealEnvidoDos";
             btnRealEnvidoDos.Size = new Size(85, 23);
             btnRealEnvidoDos.TabIndex = 39;
             btnRealEnvidoDos.Text = "Real Envido!";
             btnRealEnvidoDos.UseVisualStyleBackColor = false;
+            btnRealEnvidoDos.Click += btnRealEnvidoDos_Click;
             // 
             // btnEnvidoDos
             // 
-            btnEnvidoDos.BackColor = SystemColors.ActiveBorder;
+            btnEnvidoDos.BackColor = SystemColors.ControlDark;
             btnEnvidoDos.Location = new Point(400, 227);
             btnEnvidoDos.Name = "btnEnvidoDos";
             btnEnvidoDos.Size = new Size(85, 23);
             btnEnvidoDos.TabIndex = 38;
             btnEnvidoDos.Text = "Envido!";
             btnEnvidoDos.UseVisualStyleBackColor = false;
+            btnEnvidoDos.Click += btnEnvidoDos_Click;
             // 
             // btnIrseUno
             // 
-            btnIrseUno.BackColor = SystemColors.ActiveBorder;
+            btnIrseUno.BackColor = SystemColors.ControlDark;
             btnIrseUno.Location = new Point(12, 314);
             btnIrseUno.Name = "btnIrseUno";
             btnIrseUno.Size = new Size(176, 23);
             btnIrseUno.TabIndex = 37;
             btnIrseUno.Text = "Me voy al mazo";
             btnIrseUno.UseVisualStyleBackColor = false;
+            btnIrseUno.Click += btnIrseUno_Click;
             // 
             // gbxJugadorDos
             // 
@@ -394,7 +389,7 @@
             // 
             // btnJugarDos
             // 
-            btnJugarDos.BackColor = SystemColors.ActiveBorder;
+            btnJugarDos.BackColor = SystemColors.ControlDark;
             btnJugarDos.Location = new Point(50, 126);
             btnJugarDos.Name = "btnJugarDos";
             btnJugarDos.Size = new Size(75, 23);
@@ -451,7 +446,7 @@
             // 
             // btnJugarUno
             // 
-            btnJugarUno.BackColor = SystemColors.ActiveBorder;
+            btnJugarUno.BackColor = SystemColors.ControlDark;
             btnJugarUno.Location = new Point(37, 126);
             btnJugarUno.Name = "btnJugarUno";
             btnJugarUno.Size = new Size(75, 23);
@@ -495,63 +490,58 @@
             // 
             // btnQuieroUno
             // 
-            btnQuieroUno.BackColor = SystemColors.ActiveBorder;
-            btnQuieroUno.Location = new Point(103, 285);
+            btnQuieroUno.BackColor = SystemColors.ControlDark;
+            btnQuieroUno.Location = new Point(49, 285);
             btnQuieroUno.Name = "btnQuieroUno";
             btnQuieroUno.Size = new Size(85, 23);
             btnQuieroUno.TabIndex = 33;
             btnQuieroUno.Text = "Quiero!";
             btnQuieroUno.UseVisualStyleBackColor = false;
+            btnQuieroUno.Click += btnQuieroUno_Click;
             // 
             // btnTrucoUno
             // 
-            btnTrucoUno.BackColor = SystemColors.ActiveBorder;
+            btnTrucoUno.BackColor = SystemColors.ControlDark;
             btnTrucoUno.Location = new Point(103, 256);
             btnTrucoUno.Name = "btnTrucoUno";
             btnTrucoUno.Size = new Size(85, 23);
             btnTrucoUno.TabIndex = 32;
             btnTrucoUno.Text = "Truco!";
             btnTrucoUno.UseVisualStyleBackColor = false;
-            // 
-            // btnFlorUno
-            // 
-            btnFlorUno.BackColor = SystemColors.ActiveBorder;
-            btnFlorUno.Location = new Point(103, 227);
-            btnFlorUno.Name = "btnFlorUno";
-            btnFlorUno.Size = new Size(85, 23);
-            btnFlorUno.TabIndex = 31;
-            btnFlorUno.Text = "Flor!";
-            btnFlorUno.UseVisualStyleBackColor = false;
+            btnTrucoUno.Click += btnTrucoUno_Click;
             // 
             // btnFaltaEnvidoUno
             // 
-            btnFaltaEnvidoUno.BackColor = SystemColors.ActiveBorder;
-            btnFaltaEnvidoUno.Location = new Point(12, 285);
+            btnFaltaEnvidoUno.BackColor = SystemColors.ControlDark;
+            btnFaltaEnvidoUno.Location = new Point(12, 256);
             btnFaltaEnvidoUno.Name = "btnFaltaEnvidoUno";
             btnFaltaEnvidoUno.Size = new Size(85, 23);
             btnFaltaEnvidoUno.TabIndex = 30;
             btnFaltaEnvidoUno.Text = "Falta Envido!";
             btnFaltaEnvidoUno.UseVisualStyleBackColor = false;
+            btnFaltaEnvidoUno.Click += btnFaltaEnvidoUno_Click;
             // 
             // btnRealEnvidoUno
             // 
-            btnRealEnvidoUno.BackColor = SystemColors.ActiveBorder;
-            btnRealEnvidoUno.Location = new Point(12, 256);
+            btnRealEnvidoUno.BackColor = SystemColors.ControlDark;
+            btnRealEnvidoUno.Location = new Point(103, 227);
             btnRealEnvidoUno.Name = "btnRealEnvidoUno";
             btnRealEnvidoUno.Size = new Size(85, 23);
             btnRealEnvidoUno.TabIndex = 29;
             btnRealEnvidoUno.Text = "Real Envido!";
             btnRealEnvidoUno.UseVisualStyleBackColor = false;
+            btnRealEnvidoUno.Click += btnRealEnvidoUno_Click;
             // 
             // btnEnvidoUno
             // 
-            btnEnvidoUno.BackColor = SystemColors.ActiveBorder;
+            btnEnvidoUno.BackColor = SystemColors.ControlDark;
             btnEnvidoUno.Location = new Point(12, 227);
             btnEnvidoUno.Name = "btnEnvidoUno";
             btnEnvidoUno.Size = new Size(85, 23);
             btnEnvidoUno.TabIndex = 28;
             btnEnvidoUno.Text = "Envido!";
             btnEnvidoUno.UseVisualStyleBackColor = false;
+            btnEnvidoUno.Click += btnEnvidoUno_Click;
             // 
             // FrmMesaTruco
             // 
@@ -568,7 +558,6 @@
             Controls.Add(btnIrseDos);
             Controls.Add(btnQuieroDos);
             Controls.Add(btnTrucoDos);
-            Controls.Add(btnFlorDos);
             Controls.Add(btnFaltaEnvidoDos);
             Controls.Add(btnRealEnvidoDos);
             Controls.Add(btnEnvidoDos);
@@ -577,7 +566,6 @@
             Controls.Add(gbxJugadorUno);
             Controls.Add(btnQuieroUno);
             Controls.Add(btnTrucoUno);
-            Controls.Add(btnFlorUno);
             Controls.Add(btnFaltaEnvidoUno);
             Controls.Add(btnRealEnvidoUno);
             Controls.Add(btnEnvidoUno);
@@ -623,7 +611,6 @@
         private Button btnIrseDos;
         private Button btnQuieroDos;
         private Button btnTrucoDos;
-        private Button btnFlorDos;
         private Button btnFaltaEnvidoDos;
         private Button btnRealEnvidoDos;
         private Button btnEnvidoDos;
@@ -640,7 +627,6 @@
         private RadioButton rBtnCartaTres;
         private Button btnQuieroUno;
         private Button btnTrucoUno;
-        private Button btnFlorUno;
         private Button btnFaltaEnvidoUno;
         private Button btnRealEnvidoUno;
         private Button btnEnvidoUno;
