@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Biblioteca_Truco.ConexionSQL">
+    <Position X="6" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAEgAAAAAAAAAAAAACAAAIAAAAAAAAAE=</HashCode>
+      <FileName>ConexionSQL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca_Truco.Carta">
+    <Position X="0.5" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABJAAAQCAAAEEggAAAAoAAAAAAIAAAAAIAAgAAiA=</HashCode>
+      <FileName>Carta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca_Truco.Jugador">
+    <Position X="13.25" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAADAAQAAUGEAAABgAAAAAAAAAAAAACAAAAAg=</HashCode>
+      <FileName>Jugador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca_Truco.Mano">
+    <Position X="8.5" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAUgAgBEAAIAAAIIIAIAoAAAACAAiA=</HashCode>
+      <FileName>Mano.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca_Truco.ManoDeCartas&lt;T&gt;">
+    <Position X="10.75" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAAAAgABgACAAAAAAIAAAAAAAEAAAAAAAgACA=</HashCode>
+      <FileName>ManoDeCartas.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Biblioteca_Truco.Partida">
+    <Position X="6" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAgAAAAIAAEAAEABAAAAAQAAAAAQAAQAUAAAAQAAA=</HashCode>
+      <FileName>Partida.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca_Truco.Ronda">
+    <Position X="3.25" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AJCChAiAgAApgAAcKxDYBgAAUACBAsAAAg4BAAACAAY=</HashCode>
+      <FileName>Ronda.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="IAccionesRonda">
+    <Position X="11" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>IAccionesRonda.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
