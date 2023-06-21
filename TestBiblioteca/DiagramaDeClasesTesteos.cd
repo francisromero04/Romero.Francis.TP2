@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Biblioteca_Truco.Tests.CartaTests">
+    <Position X="1.25" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAgAAAAAIAAAAAAA=</HashCode>
+      <FileName>CartaTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca_Truco.Tests.ConexionSQLTests">
+    <Position X="4" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAIAAAAABAAAAAA=</HashCode>
+      <FileName>ConexionSQLTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca_Truco.Tests.PartidaTests">
+    <Position X="6.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>PartidaTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Biblioteca_Truco.Tests.RondaTests">
+    <Position X="9.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAACAAAAAAAAgIAAQCAAAAAAA=</HashCode>
+      <FileName>RondaTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

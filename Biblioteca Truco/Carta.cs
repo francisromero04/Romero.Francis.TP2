@@ -11,18 +11,18 @@ namespace Biblioteca_Truco
         #region ATRIBUTOS
 
         private EPalosCarta paloCarta;
-        private int numeroCarta;
-        private int valorCarta;
         private int puntajeTanto;
+        private int valorCarta;
+        private int numeroCarta;
 
         #endregion
 
         public Carta(bool randomizar)
         {
             this.numeroCarta = CalcularNumeroAleatorio();
-            this.paloCarta = CalcularPaloAleatorio();
-            this.valorCarta = CalcularValorCarta(this.numeroCarta, this.paloCarta);
             this.puntajeTanto = CalcularValorTanto();
+            this.valorCarta = CalcularValorCarta(this.numeroCarta, this.paloCarta);
+            this.paloCarta = CalcularPaloAleatorio();
         }
 
         #region GETTERS Y SETTERS
@@ -142,7 +142,7 @@ namespace Biblioteca_Truco
             return numero;
         }
 
-        private static EPalosCarta CalcularPaloAleatorio()
+        public static EPalosCarta CalcularPaloAleatorio()
         {
             EPalosCarta[] palos = (EPalosCarta[])Enum.GetValues(typeof(EPalosCarta));
             Random random = new Random();

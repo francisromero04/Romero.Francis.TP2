@@ -276,7 +276,7 @@ namespace Biblioteca_Truco
        {
             if (tantoCantado)
             {
-                DeclinarEnvido(jugadorPasivo);
+                RechazarEnvido(jugadorPasivo);
             }
             else
             {
@@ -321,7 +321,7 @@ namespace Biblioteca_Truco
             ReavivarEnvido(2, CalcularValorFaltaEnvido(partida));
        }
 
-        public void AceptarEnvido(Jugador jugadorQueAcepta, Jugador jugadorPasivo)
+       public void AceptarEnvido(Jugador jugadorQueAcepta, Jugador jugadorPasivo)
         {
             valorActualTanto = this.valorTantoAceptado;
             tantoCantado = false;
@@ -336,13 +336,13 @@ namespace Biblioteca_Truco
             }
         }
       
-        public void DeclinarEnvido(Jugador jugadorPasivo)
+       public void RechazarEnvido(Jugador jugadorPasivo)
         {
             ganadorTanto = jugadorPasivo;
             tantoJugado = true;
         }
 
-        public static void Repartir(Jugador j1, Jugador j2)
+       public static void Repartir(Jugador j1, Jugador j2)
         {
             j1.Mano = new Mano(true);
 
@@ -352,7 +352,7 @@ namespace Biblioteca_Truco
             } while (j1.Mano == j2.Mano);
         }
         
-        public int CalcularValorFaltaEnvido(Partida partida)
+       public int CalcularValorFaltaEnvido(Partida partida)
         {
             int ret;
             Jugador puntero = partida.CalcularGanador();
@@ -367,7 +367,7 @@ namespace Biblioteca_Truco
             return ret;
         }
 
-        public void CierreDeRonda()
+       public void CierreDeRonda()
         {
             if (ganadorTanto != null)
             {
@@ -376,7 +376,7 @@ namespace Biblioteca_Truco
             ganadorTruco.Puntos += valorActualTruco;
         }
       
-        public string MostrarPosicion(Partida partida, int puesto)
+       public string MostrarPosicion(Partida partida, int puesto)
         {
             string puesto1 = $"{partida.JugadorUno.NombreJugador} -> {partida.JugadorUno.Puntos} pts.";
             string puesto2 = $"{partida.JugadorDos.NombreJugador} -> {partida.JugadorDos.Puntos} pts.";
@@ -398,7 +398,7 @@ namespace Biblioteca_Truco
             return ret;
         }
         
-        public override string ToString()
+       public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
 

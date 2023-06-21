@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Biblioteca Truco", "Bibliot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forms Truco", "Forms Truco\Forms Truco.csproj", "{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca TrucoTests", "Biblioteca TrucoTests\Biblioteca TrucoTests.csproj", "{555E3FF5-A3F4-4C66-95DD-7ADC2C3A0D4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBiblioteca", "TestBiblioteca\TestBiblioteca.csproj", "{977AD9E9-6E7E-490B-AD26-C61717E21546}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{245FF5F0-A6F9-4311-B20D-C589D51E9DDB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{555E3FF5-A3F4-4C66-95DD-7ADC2C3A0D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{555E3FF5-A3F4-4C66-95DD-7ADC2C3A0D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{555E3FF5-A3F4-4C66-95DD-7ADC2C3A0D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{555E3FF5-A3F4-4C66-95DD-7ADC2C3A0D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{977AD9E9-6E7E-490B-AD26-C61717E21546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{977AD9E9-6E7E-490B-AD26-C61717E21546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{977AD9E9-6E7E-490B-AD26-C61717E21546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{977AD9E9-6E7E-490B-AD26-C61717E21546}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
