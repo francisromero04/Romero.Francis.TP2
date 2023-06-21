@@ -31,10 +31,7 @@
             menuStripPrincipal = new MenuStrip();
             CrearPartidaToolStripMenuItem = new ToolStripMenuItem();
             historialToolStripMenuItem = new ToolStripMenuItem();
-            historialDeManosRepartidasXMLToolStripMenuItem = new ToolStripMenuItem();
             historialDeResultadosSQLToolStripMenuItem = new ToolStripMenuItem();
-            historialDeFloresTXTToolStripMenuItem = new ToolStripMenuItem();
-            historialDeFloresJSONToolStripMenuItem = new ToolStripMenuItem();
             menuStripPrincipal.SuspendLayout();
             SuspendLayout();
             // 
@@ -57,35 +54,17 @@
             // 
             // historialToolStripMenuItem
             // 
-            historialToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { historialDeManosRepartidasXMLToolStripMenuItem, historialDeResultadosSQLToolStripMenuItem, historialDeFloresTXTToolStripMenuItem, historialDeFloresJSONToolStripMenuItem });
+            historialToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { historialDeResultadosSQLToolStripMenuItem });
             historialToolStripMenuItem.Font = new Font("Times New Roman", 9F, FontStyle.Italic, GraphicsUnit.Point);
             historialToolStripMenuItem.Name = "historialToolStripMenuItem";
             historialToolStripMenuItem.Size = new Size(76, 20);
             historialToolStripMenuItem.Text = "Estadisticas";
             // 
-            // historialDeManosRepartidasXMLToolStripMenuItem
-            // 
-            historialDeManosRepartidasXMLToolStripMenuItem.Name = "historialDeManosRepartidasXMLToolStripMenuItem";
-            historialDeManosRepartidasXMLToolStripMenuItem.Size = new Size(257, 22);
-            historialDeManosRepartidasXMLToolStripMenuItem.Text = "Historial de Manos Repartidas (XML)";
-            // 
             // historialDeResultadosSQLToolStripMenuItem
             // 
             historialDeResultadosSQLToolStripMenuItem.Name = "historialDeResultadosSQLToolStripMenuItem";
-            historialDeResultadosSQLToolStripMenuItem.Size = new Size(257, 22);
+            historialDeResultadosSQLToolStripMenuItem.Size = new Size(219, 22);
             historialDeResultadosSQLToolStripMenuItem.Text = "Historial de Resultados (SQL)";
-            // 
-            // historialDeFloresTXTToolStripMenuItem
-            // 
-            historialDeFloresTXTToolStripMenuItem.Name = "historialDeFloresTXTToolStripMenuItem";
-            historialDeFloresTXTToolStripMenuItem.Size = new Size(254, 22);
-            historialDeFloresTXTToolStripMenuItem.Text = "Historial de Pardas (TXT)";
-            // 
-            // historialDeFloresJSONToolStripMenuItem
-            // 
-            historialDeFloresJSONToolStripMenuItem.Name = "historialDeFloresJSONToolStripMenuItem";
-            historialDeFloresJSONToolStripMenuItem.Size = new Size(254, 22);
-            historialDeFloresJSONToolStripMenuItem.Text = "Historial de Flores (JSON)";
             // 
             // FrmInicio
             // 
@@ -110,9 +89,6 @@
         private MenuStrip menuStripPrincipal;
         private ToolStripMenuItem CrearPartidaToolStripMenuItem;
         private ToolStripMenuItem historialToolStripMenuItem;
-        private ToolStripMenuItem historialDeManosRepartidasXMLToolStripMenuItem;
         private ToolStripMenuItem historialDeResultadosSQLToolStripMenuItem;
-        private ToolStripMenuItem historialDeFloresTXTToolStripMenuItem;
-        private ToolStripMenuItem historialDeFloresJSONToolStripMenuItem;
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             lblFechaYHora = new Label();
-            lblCantoJugador2 = new Label();
-            lblCantoJugador1 = new Label();
+            lblCantoDos = new Label();
+            lblCantoUno = new Label();
             btnCancelarJuego = new Button();
             gbxPosiciones = new GroupBox();
             lblPosicion2 = new Label();
@@ -60,16 +60,14 @@
             btnIrseUno = new Button();
             gbxJugadorDos = new GroupBox();
             btnJugarDos = new Button();
-            chbOcultarDos = new CheckBox();
-            rBtn4 = new RadioButton();
-            rBtn5 = new RadioButton();
-            rBtn6 = new RadioButton();
+            rBtnCartaCuatro = new RadioButton();
+            rBtnCartaCinco = new RadioButton();
+            rBtnCartaSeis = new RadioButton();
             gbxJugadorUno = new GroupBox();
             btnJugarUno = new Button();
-            chbOcultarUno = new CheckBox();
-            rBtn1 = new RadioButton();
-            rBtn2 = new RadioButton();
-            rBtn3 = new RadioButton();
+            rBtnCartaUno = new RadioButton();
+            rBtnCartaDos = new RadioButton();
+            rBtnCartaTres = new RadioButton();
             btnQuieroUno = new Button();
             btnTrucoUno = new Button();
             btnFlorUno = new Button();
@@ -91,25 +89,25 @@
             lblFechaYHora.Text = "Hora";
             lblFechaYHora.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // lblCantoJugador2
+            // lblCantoDos
             // 
-            lblCantoJugador2.AutoSize = true;
-            lblCantoJugador2.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCantoJugador2.Location = new Point(400, 394);
-            lblCantoJugador2.Name = "lblCantoJugador2";
-            lblCantoJugador2.Size = new Size(151, 25);
-            lblCantoJugador2.TabIndex = 49;
-            lblCantoJugador2.Text = "Falta Envido!";
+            lblCantoDos.AutoSize = true;
+            lblCantoDos.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCantoDos.Location = new Point(400, 394);
+            lblCantoDos.Name = "lblCantoDos";
+            lblCantoDos.Size = new Size(151, 25);
+            lblCantoDos.TabIndex = 49;
+            lblCantoDos.Text = "Falta Envido!";
             // 
-            // lblCantoJugador1
+            // lblCantoUno
             // 
-            lblCantoJugador1.AutoSize = true;
-            lblCantoJugador1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            lblCantoJugador1.Location = new Point(12, 394);
-            lblCantoJugador1.Name = "lblCantoJugador1";
-            lblCantoJugador1.Size = new Size(151, 25);
-            lblCantoJugador1.TabIndex = 48;
-            lblCantoJugador1.Text = "Falta Envido!";
+            lblCantoUno.AutoSize = true;
+            lblCantoUno.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lblCantoUno.Location = new Point(12, 394);
+            lblCantoUno.Name = "lblCantoUno";
+            lblCantoUno.Size = new Size(151, 25);
+            lblCantoUno.TabIndex = 48;
+            lblCantoUno.Text = "Falta Envido!";
             // 
             // btnCancelarJuego
             // 
@@ -211,9 +209,9 @@
             // 
             // lblCarta3B
             // 
-            lblCarta3B.Location = new Point(137, 168);
+            lblCarta3B.Location = new Point(113, 168);
             lblCarta3B.Name = "lblCarta3B";
-            lblCarta3B.Size = new Size(57, 15);
+            lblCarta3B.Size = new Size(81, 15);
             lblCarta3B.TabIndex = 10;
             lblCarta3B.Text = "Carta 3B";
             lblCarta3B.TextAlign = ContentAlignment.MiddleRight;
@@ -247,9 +245,9 @@
             // 
             // lblCarta2B
             // 
-            lblCarta2B.Location = new Point(137, 105);
+            lblCarta2B.Location = new Point(113, 105);
             lblCarta2B.Name = "lblCarta2B";
-            lblCarta2B.Size = new Size(57, 15);
+            lblCarta2B.Size = new Size(81, 15);
             lblCarta2B.TabIndex = 7;
             lblCarta2B.Text = "Carta 2B";
             lblCarta2B.TextAlign = ContentAlignment.MiddleRight;
@@ -274,9 +272,9 @@
             // 
             // lblCarta1B
             // 
-            lblCarta1B.Location = new Point(137, 46);
+            lblCarta1B.Location = new Point(113, 46);
             lblCarta1B.Name = "lblCarta1B";
-            lblCarta1B.Size = new Size(57, 15);
+            lblCarta1B.Size = new Size(81, 15);
             lblCarta1B.TabIndex = 4;
             lblCarta1B.Text = "Carta 1B";
             lblCarta1B.TextAlign = ContentAlignment.MiddleRight;
@@ -384,13 +382,12 @@
             // gbxJugadorDos
             // 
             gbxJugadorDos.Controls.Add(btnJugarDos);
-            gbxJugadorDos.Controls.Add(chbOcultarDos);
-            gbxJugadorDos.Controls.Add(rBtn4);
-            gbxJugadorDos.Controls.Add(rBtn5);
-            gbxJugadorDos.Controls.Add(rBtn6);
+            gbxJugadorDos.Controls.Add(rBtnCartaCuatro);
+            gbxJugadorDos.Controls.Add(rBtnCartaCinco);
+            gbxJugadorDos.Controls.Add(rBtnCartaSeis);
             gbxJugadorDos.Location = new Point(400, 10);
             gbxJugadorDos.Name = "gbxJugadorDos";
-            gbxJugadorDos.Size = new Size(176, 211);
+            gbxJugadorDos.Size = new Size(176, 156);
             gbxJugadorDos.TabIndex = 35;
             gbxJugadorDos.TabStop = false;
             gbxJugadorDos.Text = "Jugador 2";
@@ -398,67 +395,56 @@
             // btnJugarDos
             // 
             btnJugarDos.BackColor = SystemColors.ActiveBorder;
-            btnJugarDos.Location = new Point(17, 168);
+            btnJugarDos.Location = new Point(50, 126);
             btnJugarDos.Name = "btnJugarDos";
             btnJugarDos.Size = new Size(75, 23);
             btnJugarDos.TabIndex = 27;
             btnJugarDos.Text = "Jugar carta";
             btnJugarDos.UseVisualStyleBackColor = false;
+            btnJugarDos.Click += btnJugarDos_Click;
             // 
-            // chbOcultarDos
+            // rBtnCartaCuatro
             // 
-            chbOcultarDos.AutoSize = true;
-            chbOcultarDos.Location = new Point(17, 32);
-            chbOcultarDos.Name = "chbOcultarDos";
-            chbOcultarDos.Size = new Size(101, 19);
-            chbOcultarDos.TabIndex = 26;
-            chbOcultarDos.Text = "Ocultar Cartas";
-            chbOcultarDos.UseVisualStyleBackColor = true;
-            chbOcultarDos.CheckedChanged += chbOcultarDos_CheckedChanged;
+            rBtnCartaCuatro.AutoSize = true;
+            rBtnCartaCuatro.Location = new Point(23, 32);
+            rBtnCartaCuatro.Name = "rBtnCartaCuatro";
+            rBtnCartaCuatro.Size = new Size(62, 19);
+            rBtnCartaCuatro.TabIndex = 17;
+            rBtnCartaCuatro.TabStop = true;
+            rBtnCartaCuatro.Text = "Carta 1";
+            rBtnCartaCuatro.UseVisualStyleBackColor = true;
             // 
-            // rBtn4
+            // rBtnCartaCinco
             // 
-            rBtn4.AutoSize = true;
-            rBtn4.Location = new Point(17, 74);
-            rBtn4.Name = "rBtn4";
-            rBtn4.Size = new Size(62, 19);
-            rBtn4.TabIndex = 17;
-            rBtn4.TabStop = true;
-            rBtn4.Text = "Carta 1";
-            rBtn4.UseVisualStyleBackColor = true;
+            rBtnCartaCinco.AutoSize = true;
+            rBtnCartaCinco.Location = new Point(23, 57);
+            rBtnCartaCinco.Name = "rBtnCartaCinco";
+            rBtnCartaCinco.Size = new Size(62, 19);
+            rBtnCartaCinco.TabIndex = 18;
+            rBtnCartaCinco.TabStop = true;
+            rBtnCartaCinco.Text = "Carta 2";
+            rBtnCartaCinco.UseVisualStyleBackColor = true;
             // 
-            // rBtn5
+            // rBtnCartaSeis
             // 
-            rBtn5.AutoSize = true;
-            rBtn5.Location = new Point(17, 99);
-            rBtn5.Name = "rBtn5";
-            rBtn5.Size = new Size(62, 19);
-            rBtn5.TabIndex = 18;
-            rBtn5.TabStop = true;
-            rBtn5.Text = "Carta 2";
-            rBtn5.UseVisualStyleBackColor = true;
-            // 
-            // rBtn6
-            // 
-            rBtn6.AutoSize = true;
-            rBtn6.Location = new Point(17, 124);
-            rBtn6.Name = "rBtn6";
-            rBtn6.Size = new Size(62, 19);
-            rBtn6.TabIndex = 19;
-            rBtn6.TabStop = true;
-            rBtn6.Text = "Carta 3";
-            rBtn6.UseVisualStyleBackColor = true;
+            rBtnCartaSeis.AutoSize = true;
+            rBtnCartaSeis.Location = new Point(23, 82);
+            rBtnCartaSeis.Name = "rBtnCartaSeis";
+            rBtnCartaSeis.Size = new Size(62, 19);
+            rBtnCartaSeis.TabIndex = 19;
+            rBtnCartaSeis.TabStop = true;
+            rBtnCartaSeis.Text = "Carta 3";
+            rBtnCartaSeis.UseVisualStyleBackColor = true;
             // 
             // gbxJugadorUno
             // 
             gbxJugadorUno.Controls.Add(btnJugarUno);
-            gbxJugadorUno.Controls.Add(chbOcultarUno);
-            gbxJugadorUno.Controls.Add(rBtn1);
-            gbxJugadorUno.Controls.Add(rBtn2);
-            gbxJugadorUno.Controls.Add(rBtn3);
+            gbxJugadorUno.Controls.Add(rBtnCartaUno);
+            gbxJugadorUno.Controls.Add(rBtnCartaDos);
+            gbxJugadorUno.Controls.Add(rBtnCartaTres);
             gbxJugadorUno.Location = new Point(12, 10);
             gbxJugadorUno.Name = "gbxJugadorUno";
-            gbxJugadorUno.Size = new Size(176, 211);
+            gbxJugadorUno.Size = new Size(176, 156);
             gbxJugadorUno.TabIndex = 34;
             gbxJugadorUno.TabStop = false;
             gbxJugadorUno.Text = "Jugador 1";
@@ -466,56 +452,46 @@
             // btnJugarUno
             // 
             btnJugarUno.BackColor = SystemColors.ActiveBorder;
-            btnJugarUno.Location = new Point(20, 168);
+            btnJugarUno.Location = new Point(37, 126);
             btnJugarUno.Name = "btnJugarUno";
             btnJugarUno.Size = new Size(75, 23);
             btnJugarUno.TabIndex = 26;
             btnJugarUno.Text = "Jugar carta";
             btnJugarUno.UseVisualStyleBackColor = false;
+            btnJugarUno.Click += btnJugarUno_Click;
             // 
-            // chbOcultarUno
+            // rBtnCartaUno
             // 
-            chbOcultarUno.AutoSize = true;
-            chbOcultarUno.Location = new Point(20, 32);
-            chbOcultarUno.Name = "chbOcultarUno";
-            chbOcultarUno.Size = new Size(101, 19);
-            chbOcultarUno.TabIndex = 25;
-            chbOcultarUno.Text = "Ocultar Cartas";
-            chbOcultarUno.UseVisualStyleBackColor = true;
-            chbOcultarUno.CheckedChanged += chbOcultarUno_CheckedChanged;
+            rBtnCartaUno.AutoSize = true;
+            rBtnCartaUno.Location = new Point(23, 32);
+            rBtnCartaUno.Name = "rBtnCartaUno";
+            rBtnCartaUno.Size = new Size(62, 19);
+            rBtnCartaUno.TabIndex = 14;
+            rBtnCartaUno.TabStop = true;
+            rBtnCartaUno.Text = "Carta 1";
+            rBtnCartaUno.UseVisualStyleBackColor = true;
             // 
-            // rBtn1
+            // rBtnCartaDos
             // 
-            rBtn1.AutoSize = true;
-            rBtn1.Location = new Point(20, 74);
-            rBtn1.Name = "rBtn1";
-            rBtn1.Size = new Size(62, 19);
-            rBtn1.TabIndex = 14;
-            rBtn1.TabStop = true;
-            rBtn1.Text = "Carta 1";
-            rBtn1.UseVisualStyleBackColor = true;
+            rBtnCartaDos.AutoSize = true;
+            rBtnCartaDos.Location = new Point(23, 57);
+            rBtnCartaDos.Name = "rBtnCartaDos";
+            rBtnCartaDos.Size = new Size(62, 19);
+            rBtnCartaDos.TabIndex = 15;
+            rBtnCartaDos.TabStop = true;
+            rBtnCartaDos.Text = "Carta 2";
+            rBtnCartaDos.UseVisualStyleBackColor = true;
             // 
-            // rBtn2
+            // rBtnCartaTres
             // 
-            rBtn2.AutoSize = true;
-            rBtn2.Location = new Point(20, 99);
-            rBtn2.Name = "rBtn2";
-            rBtn2.Size = new Size(62, 19);
-            rBtn2.TabIndex = 15;
-            rBtn2.TabStop = true;
-            rBtn2.Text = "Carta 2";
-            rBtn2.UseVisualStyleBackColor = true;
-            // 
-            // rBtn3
-            // 
-            rBtn3.AutoSize = true;
-            rBtn3.Location = new Point(20, 124);
-            rBtn3.Name = "rBtn3";
-            rBtn3.Size = new Size(62, 19);
-            rBtn3.TabIndex = 16;
-            rBtn3.TabStop = true;
-            rBtn3.Text = "Carta 3";
-            rBtn3.UseVisualStyleBackColor = true;
+            rBtnCartaTres.AutoSize = true;
+            rBtnCartaTres.Location = new Point(23, 82);
+            rBtnCartaTres.Name = "rBtnCartaTres";
+            rBtnCartaTres.Size = new Size(62, 19);
+            rBtnCartaTres.TabIndex = 16;
+            rBtnCartaTres.TabStop = true;
+            rBtnCartaTres.Text = "Carta 3";
+            rBtnCartaTres.UseVisualStyleBackColor = true;
             // 
             // btnQuieroUno
             // 
@@ -584,8 +560,8 @@
             BackColor = SystemColors.AppWorkspace;
             ClientSize = new Size(589, 491);
             Controls.Add(lblFechaYHora);
-            Controls.Add(lblCantoJugador2);
-            Controls.Add(lblCantoJugador1);
+            Controls.Add(lblCantoDos);
+            Controls.Add(lblCantoUno);
             Controls.Add(btnCancelarJuego);
             Controls.Add(gbxPosiciones);
             Controls.Add(gbxMesa);
@@ -623,8 +599,8 @@
         #endregion
 
         private Label lblFechaYHora;
-        private Label lblCantoJugador2;
-        private Label lblCantoJugador1;
+        private Label lblCantoDos;
+        private Label lblCantoUno;
         private Button btnCancelarJuego;
         private GroupBox gbxPosiciones;
         private Label lblPosicion2;
@@ -654,16 +630,14 @@
         private Button btnIrseUno;
         private GroupBox gbxJugadorDos;
         private Button btnJugarDos;
-        private CheckBox chbOcultarDos;
-        private RadioButton rBtn4;
-        private RadioButton rBtn5;
-        private RadioButton rBtn6;
+        private RadioButton rBtnCartaCuatro;
+        private RadioButton rBtnCartaCinco;
+        private RadioButton rBtnCartaSeis;
         private GroupBox gbxJugadorUno;
         private Button btnJugarUno;
-        private CheckBox chbOcultarUno;
-        private RadioButton rBtn1;
-        private RadioButton rBtn2;
-        private RadioButton rBtn3;
+        private RadioButton rBtnCartaUno;
+        private RadioButton rBtnCartaDos;
+        private RadioButton rBtnCartaTres;
         private Button btnQuieroUno;
         private Button btnTrucoUno;
         private Button btnFlorUno;

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data;
+using System.Reflection.PortableExecutable;
 
 namespace Biblioteca_Truco
 {
@@ -11,31 +13,17 @@ namespace Biblioteca_Truco
     {
         private static SqlConnection conexion;
         private static SqlCommand comandoTexto;
-        private static SqlDataReader dataReader;
+        private static SqlDataReader? dataReader; //ES NULLEABLE
 
-        /// <summary>
-        /// Constructor estático, setea datos de conexión.
-        /// </summary>
         static ConexionSQL()
         {
-            ConexionSQL.conexion = new SqlConnection("Server=.;Database=Truco_Simulador;Trusted_Connection=True;");
-            ConexionSQL.comandoTexto = new SqlCommand();
-            ConexionSQL.comandoTexto.CommandType = System.Data.CommandType.Text;
-            ConexionSQL.comandoTexto.Connection = conexion;
+            conexion = new SqlConnection("Server = .;Database = Truco_Simulador;Trusted_Connection = True;");
+            comandoTexto = new SqlCommand();
+            comandoTexto.CommandType = CommandType.Text;
+            comandoTexto.Connection = conexion;
         }
 
-        public static SqlConnection Conexion
-        {
-            get
-            {
-                return ConexionSQL.conexion;
-            }
-        }
-
-        /// <summary>
-        /// Cierra una conexión en caso de estar abierta.
-        /// </summary>
-        public static void Cerrar()
+        public static void CerrarConexion()
         {
             if (ConexionSQL.conexion.State == System.Data.ConnectionState.Open)
             {
@@ -43,15 +31,8 @@ namespace Biblioteca_Truco
             }
         }
 
-        /// <summary>
-        /// Lee todo de la tabla TablaPartidas y lo trae en un SqlDataReader. Posteriormente se debe cerrar la conexión a través del método estático SQL.Cerrar().
-        /// </summary>
-        /// <returns>Un SqlDataReader con la data leída</returns>
         public static SqlDataReader Leer()
-        {
-            // El bloque finally con su correspondiente Close está en la llamada
-            // ya que si lo cerraba antes, el DataReader que devolvía llegaba trunco. 
-
+        {          
             try
             {
                 ConexionSQL.comandoTexto.CommandText = "SELECT * FROM TablaPartidas";
@@ -63,6 +44,34 @@ namespace Biblioteca_Truco
                 throw new ExcepcionConectar();
             }
             return ConexionSQL.dataReader;
+        }
+
+        public static void GuardarPartidaSQL(Partida partida)
+        {
+            try
+            {
+                Jugador ganador = partida.CalcularGanador();
+                string ganadorNombre = (ganador == null) ? "Empate" : ganador.NombreJugador;
+
+                comandoTexto.CommandText = "INSERT INTO TablaPartidas VALUES (@JugadorUno, @PuntosJugadorUno, @JugadorDos, @PuntosJugadorDos, @Ganador)";
+                comandoTexto.Parameters.AddWithValue("@JugadorUno", partida.JugadorUno.NombreJugador);
+                comandoTexto.Parameters.AddWithValue("@PuntosJugadorUno", partida.JugadorUno.Puntos);
+                comandoTexto.Parameters.AddWithValue("@JugadorDos", partida.JugadorDos.NombreJugador);
+                comandoTexto.Parameters.AddWithValue("@PuntosJugadorDos", partida.JugadorDos.Puntos);
+                comandoTexto.Parameters.AddWithValue("@Ganador", ganadorNombre);
+
+                conexion.Open();
+                comandoTexto.ExecuteNonQuery();
+                comandoTexto.Parameters.Clear();
+            }
+            catch (Exception)
+            {
+                throw new ExcepcionConectar();
+            }
+            finally
+            {
+                CerrarConexion();
+            }
         }
     }
 }

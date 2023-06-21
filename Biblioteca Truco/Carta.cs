@@ -17,11 +17,6 @@ namespace Biblioteca_Truco
 
         #endregion
 
-        public Carta()
-        {
-
-        }
-
         public Carta(bool randomizar)
         {
             this.numeroCarta = CalcularNumeroAleatorio();
@@ -176,18 +171,12 @@ namespace Biblioteca_Truco
 
         public override bool Equals(object obj)
         {
-            bool ret = false;
-
-            if (this is null && obj is null)
+            if (obj is Carta carta)
             {
-                ret = true;
-            }
-            else if (obj is not null && obj is Carta && this is not null)
-            {
-                ret = this == (Carta)obj;
+                return this == carta;
             }
 
-            return ret;
+            return false;
         }
 
         public override int GetHashCode()

@@ -18,8 +18,8 @@ namespace Biblioteca_Truco
         private bool trucoCantado;
         private bool tantoCantado;
         private EValorEnvido valorEnvido;
-        private Carta cartaJugadorUno;
-        private Carta cartaJugadorDos;
+        private Carta? cartaJugadorUno;
+        private Carta? cartaJugadorDos;
         private int turno;
         private int manosGanadasJugadorUno;
         private int manosGanadasJugadorDos;
@@ -150,7 +150,7 @@ namespace Biblioteca_Truco
             }
         }
 
-        public int ManosGanadasJugador1
+        public int ManosGanadasJugadorUno
         {
             get
             {
@@ -162,7 +162,7 @@ namespace Biblioteca_Truco
             }
         }
 
-        public int ManosGanadasJugador2
+        public int ManosGanadasJugadorDos
         {
             get
             {
@@ -222,7 +222,7 @@ namespace Biblioteca_Truco
             }
         }
 
-        public Carta NaipeJugador1
+        public Carta? CartaJugadorUno
         {
             get
             {
@@ -234,15 +234,15 @@ namespace Biblioteca_Truco
             }
         }
 
-        public Carta NaipeJugador2
+        public Carta? CartaJugadorDos
         {
             get
             {
-                return this.cartaJugadorDos;
+                return cartaJugadorDos;
             }
             set
             {
-                this.cartaJugadorDos = value;
+                cartaJugadorDos = value;
             }
         }
 
@@ -367,9 +367,9 @@ namespace Biblioteca_Truco
             return ret;
         }
 
-        public void TerminarRonda()
+        public void FinalizarRonda()
         {
-            if (ganadorTanto is not null)
+            if (ganadorTanto != null)
             {
                 ganadorTanto.Puntos += valorActualTanto;
             }
@@ -402,9 +402,9 @@ namespace Biblioteca_Truco
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"{ganadorTruco.NombreJugador} se lleva {valorActualTruco} pts. de la partida.");
-            if (this.ganadorTanto is not null)
+            if (ganadorTanto is not null)
             {
-                sb.AppendLine($"{ganadorTanto.NombreJugador} se lleva {this.valorActualTanto} pts. del tanto.");
+                sb.AppendLine($"{ganadorTanto.NombreJugador} se lleva {valorActualTanto} pts. del tanto.");
             }
             else
             {
