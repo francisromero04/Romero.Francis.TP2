@@ -9,8 +9,8 @@ En términos generales, el programa que he desarrollado simula una partida entre
 En resumen, esta experiencia me ha brindado un amplio conocimiento sobre el concepto de multihilos, excepciones y delegados, los cuales se aplican a lo largo de todo el programa en diferentes aspectos de su gestión.
 
 ## DIAGRAMA DE CLASES
-![Diagrama de Clases](./DiagramaDeClasesBibliotecaTruco.png)
-![Diagrama de Clases](./DiagramaDeClasesTesteos.png)
+![Diagrama de Clases](C:\Users\User\Pictures\DiagramaDeClasesBibliotecaTruco.png)
+![Diagrama de Clases](C:\Users\User\Pictures\DiagramaDeClasesTesteos.png)
 
 ## Justificación técnica
 
