@@ -110,6 +110,7 @@ namespace Forms_Truco
             }
             else if (partida.RondaPartida.TantoCantado && !partida.RondaPartida.TantoJugado)
             {
+                controles[5].Enabled = true;
                 controles[6].Text = "No quiero!";
                 controles[6].Enabled = true;
                 HabilitarEnvido(controles);
