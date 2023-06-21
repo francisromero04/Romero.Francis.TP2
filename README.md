@@ -17,23 +17,23 @@ Esta experiencia me ha brindado un amplio conocimiento sobre el concepto de mult
 
 ## Justificación técnica
 
--  TEMA 1: MANEJO DE SQL
+-  TEMA 1: MANEJO DE SQL.
   -  Se introduce una capa de almacenamiento permanente mediante el uso de una base de datos en SQL. Esto se utiliza para conservar un registro histórico de los datos de las partidas concluidas de dicho juego.
 
--  TEMA 2: MANEJO DE EXCEPCIONES
+-  TEMA 2: MANEJO DE EXCEPCIONES.
   -  Se utilizaron excepciones en el código para manejar situaciones excepcionales o errores que puedan ocurrir durante la ejecución del programa y tener la capacidad de manipular adecuadamente situaciones imprevistas.
 
--  TEMA 3: PRUEBAS UNITARIAS
+-  TEMA 3: PRUEBAS UNITARIAS.
   -  Se incluyeron pruebas unitarias para verificar el funcionamiento correcto de unidades individuales de código, es decir, las clases de mi biblioteca.
 
--  TEMA 4: GENERICS
+-  TEMA 4: GENERICS.
   -  Se implementó una clase generica en la cual logre manipular un mazo de cartas de manera personalizada. A su vez, se añadió una clase de serializacion de tipo generica.
 
--  TEMA 5: INTERFACES
+-  TEMA 5: INTERFACES.
   -  Se utilizaron interfaces para mejorar la flexibilidad del sistema y el ordenamiento del código. 
 
-- TEMA 6: DELEGADOS Y EVENTOS
+- TEMA 6: DELEGADOS Y EVENTOS.
   -  Se introdujo un delegado personalizado que es utilizado en conjunto con un evento.
 
-- TEMA 7: TASK
+- TEMA 7: TASK.
   -  Generacion de subprocesos y teniendo la posibilidad de mostrar la hora, actualizandose en tiempo y forma real sin tomar el hilo principal.
