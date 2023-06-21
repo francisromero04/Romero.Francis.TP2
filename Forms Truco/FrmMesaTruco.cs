@@ -45,8 +45,8 @@ namespace Forms_Truco
         {
             if (this.partida.RondaPartida.EstadoEnvido < 2)
             {
-                controles[3].Enabled = true;
-                controles[5].Enabled = true;
+                controles[2].Enabled = true;
+                controles[4].Enabled = true;
 
                 if (this.partida.RondaPartida.EstadoEnvido < 1)
                 {
@@ -595,6 +595,7 @@ namespace Forms_Truco
             partida.RondaPartida.Retrucar(partida.JugadorUno, partida.JugadorDos);
             lblCantoUno.Text = btnTrucoUno.Text;
             AccionCambiar();
+            SerializadoraJSON<Mano>.SerializarJson(partida.JugadorUno.Mano, "Conteo_Trucos_Cantados.json");
         }
 
         private void btnTrucoDos_Click(object sender, EventArgs e)
@@ -603,6 +604,7 @@ namespace Forms_Truco
             partida.RondaPartida.Retrucar(partida.JugadorDos, partida.JugadorUno);
             lblCantoDos.Text = btnTrucoDos.Text;
             AccionCambiar();
+            SerializadoraJSON<Mano>.SerializarJson(partida.JugadorUno.Mano, "Conteo_Trucos_Cantados.json");
         }
 
         private void btnQuieroUno_Click(object sender, EventArgs e)

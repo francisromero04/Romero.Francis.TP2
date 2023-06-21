@@ -342,14 +342,18 @@ namespace Biblioteca_Truco
             tantoJugado = true;
         }
 
-       public static void Repartir(Jugador j1, Jugador j2)
+       public static void Repartir(Jugador jugadorUno, Jugador jugadorDos)
         {
-            j1.Mano = new Mano(true);
+            jugadorUno.Mano = new Mano(true);
 
             do
             {
-                j2.Mano = new Mano(true);
-            } while (j1.Mano == j2.Mano);
+                jugadorDos.Mano = new Mano(true);
+            } while (jugadorUno.Mano == jugadorDos.Mano);
+
+            Registro.RegistroCartasPorMano.Add(jugadorUno.Mano);
+            Registro.RegistroCartasPorMano.Add(jugadorDos.Mano);
+            Registro.Guardar();
         }
         
        public int CalcularValorFaltaEnvido(Partida partida)

@@ -16,6 +16,11 @@ namespace Biblioteca_Truco
         private int numeroCarta;
 
         #endregion
+        
+        public Carta()
+        {
+
+        }
 
         public Carta(bool randomizar)
         {

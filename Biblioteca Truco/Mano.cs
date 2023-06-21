@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Biblioteca_Truco
 {
@@ -10,6 +11,7 @@ namespace Biblioteca_Truco
     {
         #region ATRIBUTOS
 
+        [XmlIgnore]
         private ManoDeCartas<Carta> cartas;
         private double tanto;
         private bool tieneFlor;

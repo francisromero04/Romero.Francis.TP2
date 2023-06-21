@@ -16,6 +16,7 @@ namespace Biblioteca_Truco
         private bool esJugadorMano;
         private bool esSuTurno;
         private bool poseeQuiero;
+        private int cantidadVictorias;
 
         #endregion
 
@@ -25,6 +26,7 @@ namespace Biblioteca_Truco
             this.esJugadorMano = esJugadorMano;
             this.esSuTurno = esJugadorMano;
             this.mano = new Mano();
+            cantidadVictorias = 0;
         }
 
         #region GETTERS Y SETTERS
@@ -96,6 +98,19 @@ namespace Biblioteca_Truco
                 this.mano = value;
             }
         }
+
+        public int CantidadVictorias
+        {
+            get
+            {
+                return cantidadVictorias;
+            }
+            set
+            {
+                cantidadVictorias = value;
+            }
+        }
+
         public override string ToString()
         {
             return $"El jugador {this.nombreJugador} tiene el siguiente puntaje: {this.puntos} pts.";

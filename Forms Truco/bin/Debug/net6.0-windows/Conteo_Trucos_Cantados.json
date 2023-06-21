@@ -1,0 +1,182 @@
+﻿[
+  {
+    "Tanto": 29,
+    "Cartas": [
+      {
+        "PaloCarta": 2,
+        "NumeroCarta": 3,
+        "PuntajeTanto": 3,
+        "ValorCarta": 15
+      },
+      {
+        "PaloCarta": 3,
+        "NumeroCarta": 12,
+        "PuntajeTanto": 0,
+        "ValorCarta": 12
+      },
+      {
+        "PaloCarta": 2,
+        "NumeroCarta": 6,
+        "PuntajeTanto": 6,
+        "ValorCarta": 6
+      }
+    ],
+    "TieneFlor": false
+  }
+]
+[
+  {
+    "Tanto": 6,
+    "Cartas": [
+      {
+        "PaloCarta": 0,
+        "NumeroCarta": 2,
+        "PuntajeTanto": 2,
+        "ValorCarta": 14
+      },
+      {
+        "PaloCarta": 1,
+        "NumeroCarta": 6,
+        "PuntajeTanto": 6,
+        "ValorCarta": 6
+      },
+      {
+        "PaloCarta": 2,
+        "NumeroCarta": 5,
+        "PuntajeTanto": 5,
+        "ValorCarta": 5
+      }
+    ],
+    "TieneFlor": false
+  }
+]
+[
+  {
+    "Tanto": 6,
+    "Cartas": [
+      {
+        "PaloCarta": 0,
+        "NumeroCarta": 2,
+        "PuntajeTanto": 2,
+        "ValorCarta": 14
+      },
+      {
+        "PaloCarta": 1,
+        "NumeroCarta": 6,
+        "PuntajeTanto": 6,
+        "ValorCarta": 6
+      },
+      {
+        "PaloCarta": 2,
+        "NumeroCarta": 5,
+        "PuntajeTanto": 5,
+        "ValorCarta": 5
+      }
+    ],
+    "TieneFlor": false
+  }
+]
+[
+  {
+    "Tanto": 26,
+    "Cartas": [
+      {
+        "PaloCarta": 1,
+        "NumeroCarta": 1,
+        "PuntajeTanto": 1,
+        "ValorCarta": 19
+      },
+      {
+        "PaloCarta": 2,
+        "NumeroCarta": 10,
+        "PuntajeTanto": 0,
+        "ValorCarta": 10
+      },
+      {
+        "PaloCarta": 2,
+        "NumeroCarta": 6,
+        "PuntajeTanto": 6,
+        "ValorCarta": 6
+      }
+    ],
+    "TieneFlor": false
+  }
+]
+[
+  {
+    "Tanto": 26,
+    "Cartas": [
+      {
+        "PaloCarta": 1,
+        "NumeroCarta": 1,
+        "PuntajeTanto": 1,
+        "ValorCarta": 19
+      },
+      {
+        "PaloCarta": 2,
+        "NumeroCarta": 10,
+        "PuntajeTanto": 0,
+        "ValorCarta": 10
+      },
+      {
+        "PaloCarta": 2,
+        "NumeroCarta": 6,
+        "PuntajeTanto": 6,
+        "ValorCarta": 6
+      }
+    ],
+    "TieneFlor": false
+  }
+]
+[
+  {
+    "Tanto": 5,
+    "Cartas": [
+      {
+        "PaloCarta": 1,
+        "NumeroCarta": 2,
+        "PuntajeTanto": 2,
+        "ValorCarta": 14
+      },
+      {
+        "PaloCarta": 3,
+        "NumeroCarta": 10,
+        "PuntajeTanto": 0,
+        "ValorCarta": 10
+      },
+      {
+        "PaloCarta": 0,
+        "NumeroCarta": 5,
+        "PuntajeTanto": 5,
+        "ValorCarta": 5
+      }
+    ],
+    "TieneFlor": false
+  }
+]
+[
+  {
+    "Tanto": 30,
+    "Cartas": [
+      {
+        "PaloCarta": 0,
+        "NumeroCarta": 6,
+        "PuntajeTanto": 6,
+        "ValorCarta": 6
+      },
+      {
+        "PaloCarta": 1,
+        "NumeroCarta": 5,
+        "PuntajeTanto": 5,
+        "ValorCarta": 5
+      },
+      {
+        "PaloCarta": 0,
+        "NumeroCarta": 4,
+        "PuntajeTanto": 4,
+        "ValorCarta": 4
+      }
+    ],
+    "TieneFlor": false
+  }
+]

@@ -4,6 +4,9 @@
     <Compile Update="FrmCrearMesa.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmEstadisticaCartasPorMano.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FrmEstadisticaPartidas.cs">
       <SubType>Form</SubType>
     </Compile>

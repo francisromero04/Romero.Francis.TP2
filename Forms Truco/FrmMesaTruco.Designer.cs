@@ -333,6 +333,7 @@
             // btnFaltaEnvidoDos
             // 
             btnFaltaEnvidoDos.BackColor = SystemColors.ControlDark;
+            btnFaltaEnvidoDos.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnFaltaEnvidoDos.Location = new Point(400, 256);
             btnFaltaEnvidoDos.Name = "btnFaltaEnvidoDos";
             btnFaltaEnvidoDos.Size = new Size(85, 23);
@@ -344,6 +345,7 @@
             // btnRealEnvidoDos
             // 
             btnRealEnvidoDos.BackColor = SystemColors.ControlDark;
+            btnRealEnvidoDos.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnRealEnvidoDos.Location = new Point(492, 227);
             btnRealEnvidoDos.Name = "btnRealEnvidoDos";
             btnRealEnvidoDos.Size = new Size(85, 23);
@@ -513,6 +515,7 @@
             // btnFaltaEnvidoUno
             // 
             btnFaltaEnvidoUno.BackColor = SystemColors.ControlDark;
+            btnFaltaEnvidoUno.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnFaltaEnvidoUno.Location = new Point(12, 256);
             btnFaltaEnvidoUno.Name = "btnFaltaEnvidoUno";
             btnFaltaEnvidoUno.Size = new Size(85, 23);
@@ -524,6 +527,7 @@
             // btnRealEnvidoUno
             // 
             btnRealEnvidoUno.BackColor = SystemColors.ControlDark;
+            btnRealEnvidoUno.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             btnRealEnvidoUno.Location = new Point(103, 227);
             btnRealEnvidoUno.Name = "btnRealEnvidoUno";
             btnRealEnvidoUno.Size = new Size(85, 23);

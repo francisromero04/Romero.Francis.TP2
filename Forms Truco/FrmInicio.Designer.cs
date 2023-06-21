@@ -32,6 +32,7 @@
             CrearPartidaToolStripMenuItem = new ToolStripMenuItem();
             historialToolStripMenuItem = new ToolStripMenuItem();
             historialDeResultadosSQLToolStripMenuItem = new ToolStripMenuItem();
+            estadisticasCartasPorManoToolStripMenuItem = new ToolStripMenuItem();
             menuStripPrincipal.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             // 
             // historialToolStripMenuItem
             // 
-            historialToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { historialDeResultadosSQLToolStripMenuItem });
+            historialToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { historialDeResultadosSQLToolStripMenuItem, estadisticasCartasPorManoToolStripMenuItem });
             historialToolStripMenuItem.Font = new Font("Times New Roman", 9F, FontStyle.Italic, GraphicsUnit.Point);
             historialToolStripMenuItem.Name = "historialToolStripMenuItem";
             historialToolStripMenuItem.Size = new Size(76, 20);
@@ -66,6 +67,13 @@
             historialDeResultadosSQLToolStripMenuItem.Size = new Size(230, 22);
             historialDeResultadosSQLToolStripMenuItem.Text = "Estadisticas Resultados Partidas";
             historialDeResultadosSQLToolStripMenuItem.Click += historialDeResultadosSQLToolStripMenuItem_Click;
+            // 
+            // estadisticasCartasPorManoToolStripMenuItem
+            // 
+            estadisticasCartasPorManoToolStripMenuItem.Name = "estadisticasCartasPorManoToolStripMenuItem";
+            estadisticasCartasPorManoToolStripMenuItem.Size = new Size(230, 22);
+            estadisticasCartasPorManoToolStripMenuItem.Text = "Estadisticas Cartas Por Mano";
+            estadisticasCartasPorManoToolStripMenuItem.Click += estadisticasCartasPorManoToolStripMenuItem_Click;
             // 
             // FrmInicio
             // 
@@ -91,5 +99,6 @@
         private ToolStripMenuItem CrearPartidaToolStripMenuItem;
         private ToolStripMenuItem historialToolStripMenuItem;
         private ToolStripMenuItem historialDeResultadosSQLToolStripMenuItem;
+        private ToolStripMenuItem estadisticasCartasPorManoToolStripMenuItem;
     }
 }

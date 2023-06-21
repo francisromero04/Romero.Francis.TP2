@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Biblioteca_Truco;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,6 +33,12 @@ namespace Forms_Truco
         private void historialDeResultadosSQLToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmEstadisticaPartidas formulario = new FrmEstadisticaPartidas();
+            formulario.ShowDialog();
+        }
+
+        private void estadisticasCartasPorManoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstadisticaCartasPorMano formulario = new FrmEstadisticaCartasPorMano();
             formulario.ShowDialog();
         }
     }
